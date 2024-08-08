@@ -43,6 +43,7 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
+    overflow: hidden;
 }
 #navbar {
     display: flex;
@@ -94,7 +95,7 @@ header {
     left: 5rem;
 }
 
-#shsid {
+#shsid, menu-dropdown {
     z-index: 1000
 }
 
@@ -169,6 +170,27 @@ footer p {
     z-index: 3;
 }
 
+#links li {
+    display: inline-block;
+}
+
+
+#menu-dropdown {
+    position: relative;
+    background: #131313;
+    border-top: 0.1rem white solid;
+    padding: 2rem;
+    display: none;
+}
+
+#menu-dropdown a {
+    text-decoration: none;
+    color: white
+}
+
+#menu-dropdown a:visited {
+    color: white
+}
 
 #menu-btn {
     display: none;
@@ -177,6 +199,10 @@ footer p {
     border: none;
     font-size: 1.2rem;
     cursor: pointer;
+}
+
+#logo_h {
+    display: none;
 }
 
 @media (max-width: 1550px) {
@@ -188,9 +214,11 @@ footer p {
     }
 }
 
-@media (max-width: 749px) {
+@media (max-width: 749px) or (max-height: 600px) {
     #menu-btn {
         display: block;
+        position: absolute;
+        right: 4rem
     }
 
     #navbar {
@@ -203,22 +231,35 @@ footer p {
         align-items: center;
     }
 
-    #navbar ul {
+    #menu-dropdown ul {
         flex-direction: column;
         background: #333;
     }
 
-    #navbar ul li {
+    #menu-dropdown ul li {
         margin: 1rem 0;
     }
 
-    #navbar.show {
+    #menu-dropdown.show {
         display: block;
     }
+
     main {
         background-size: contain;
     }
+
+    #logo_h {
+        display: block;
+        position: absolute;
+        padding: 0!important;
+        margin: 0!important;
+        height: 120%;
+        left: 50%;
+        bottom: 50%;
+        transform: translateX(-52%) translateY(60%);
+    }
 }
+
 
 .fa-solid {
     margin: 0 2%;
