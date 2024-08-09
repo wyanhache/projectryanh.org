@@ -260,6 +260,14 @@ footer p {
         bottom: 50%;
         transform: translateX(-52%) translateY(60%);
     }
+
+    #social {
+        position: absolute;
+        padding: 0!important;
+        margin: 0!important;
+        left: 50%!important;
+        transform: translateX(-50%);
+    }
 }
 
 
@@ -270,7 +278,8 @@ footer p {
 
 #social {
     position: absolute;
-    bottom: 0;
+    top: 9.75rem;
+    left: -2rem;
     display: flex;
     justify-content: center;
     margin: 3rem;
@@ -283,4 +292,5 @@ footer p {
 
 #social i {
    font-size: 1.5rem;
+   color: white;
 }
