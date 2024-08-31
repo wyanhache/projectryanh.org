@@ -258,15 +258,6 @@ footer p {
         transform: translateX(-52%) translateY(60%);
     }
 
-    #social {
-        position: absolute;
-        padding: 0!important;
-        margin: 0!important;
-        bottom: 5rem!important;
-        left: 50%!important;
-        transform: translateX(-50%);
-    }
-
     footer {
         height: 15vh;
     }
