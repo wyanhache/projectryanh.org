@@ -258,9 +258,6 @@ footer p {
         transform: translateX(-52%) translateY(60%);
     }
 
-    footer {
-        height: 15vh;
-    }
 }
 
 
@@ -286,4 +283,13 @@ footer p {
 #social i {
    font-size: 1.5rem;
    color: white;
+}
+
+#logo_ha {
+    position: absolute;
+    z-index: 0;
+    top:0;
+    left:0;
+    padding: 2em;
+    width: clamp(300px, 20vw, 20vw);
 }
