@@ -100,11 +100,12 @@ header {
     z-index: 1000
 }
 
-main {
+.content {
     position: relative;
     height: 90vh!important;
 }
-#prh {
+
+.prh-a {
     background-color: black;
     color: white;
     font-family: "Newzald Black", Georgia!important;
@@ -120,9 +121,15 @@ a:visited {
 }
 
 
-main {
+.body-a {
     height: 100vh; /* Ensure the main content takes up the full viewport height */
     background-image: url(img/Screenshot\ 2024-11-18\ at\ 23.56.04.jpg);
+    background-size:cover;
+    background-position:center
+}
+
+.body-b {
+    background-image: url(img/IMG_1888.jpg);
     background-size:cover;
     background-position:center
 }
@@ -243,7 +250,7 @@ footer p {
         display: block;
     }
 
-    main {
+    body-a {
         background-size: contain;
     }
 
@@ -292,4 +299,8 @@ footer p {
     left:0;
     padding: 2em;
     width: clamp(300px, 20vw, 20vw);
+}
+
+img {
+    user-select: none!important;
 }
