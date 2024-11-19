@@ -122,9 +122,9 @@ a:visited {
 
 main {
     height: 100vh; /* Ensure the main content takes up the full viewport height */
-    background-image: url(img/IMG_1888.jpg);
+    background-image: url(img/Screenshot\ 2024-11-18\ at\ 23.56.04.jpg);
     background-size:cover;
-    background-position: center
+    background-position:center
 }
 
 #cart {
