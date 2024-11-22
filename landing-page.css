@@ -134,6 +134,13 @@ a:visited {
     background-position:center
 }
 
+.body-c {
+    background-image: url(img/Pasted\ Graphic\ 7.png);
+    background-size:cover;
+    background-position:center
+    
+}
+
 #cart {
     position: absolute;
     padding: 0!important;

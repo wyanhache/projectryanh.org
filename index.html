@@ -2,57 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
     <title>projectryanh.org > /</title>
     <link rel="icon" type="image/x-icon" href="img/1f320.ico">
-    <link rel="stylesheet" href="landing-page.css">
     <script src="https://kit.fontawesome.com/7308cf0505.js" crossorigin="anonymous"></script>
-    <meta>
+    <link rel="stylesheet" href="new-index.css">
+    <link rel="stylesheet" href="img/fullpage.css">
+
+    <meta property="og:url" content="https://projectryanh.org">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="projectryanh.org > /">
+    <meta property="og:title" content="projectryanh.org > Main Page">
+    <meta property="og:description" content="projectryanh is the Project Archive of Ryan H @ SHSID '27.">
+    <meta property="og:image" content="https://projectryanh.org/img/IMG_1888.jpg">
 </head>
 <body>
     <header>
-        <button id="menu-btn"><i class="fa-solid fa-bars"></i></button>
-        <a href="#"><img id="logo_h" src="img/logo.png"></a>
-        <nav id="navbar">
-            <a href="#"><img id="logo" src="img/logo.png"></a>
-            <ul id="links">
-                <li><a href="7/A/A/"><p><i class="fa-solid fa-leaf"></i>7/A/A</p></a></li>
-                <li><a href="C/1/8/"><p><i class="fa-solid fa-film"></i>Christchurch's <i>18 Minutes</i></p></a></li>
-                <li><a href="bio/"><p><i class="fa-solid fa-user"></i>About</p></a></li>
-                <li><a href="contact/"><p><i class="fa-solid fa-address-book"></i>Contact</p></a></li>
-            </ul>
-            <a href="https://www.shsid.org/" target="_blank" id="shsid">
-                <img src="img/shsid_logo.png" alt="">
-                <p style="font-family: 'Newzald Black', Georgia, 'Times New Roman', Times, serif; color: white!important;">Shanghai High School <br> International Division</p>
-            </a>
-            
-            <img id="cart" src="img/Untitled_Artwork.png" alt="">
+        <nav>
+            <a href="#"><img id="nav-logo" src="img/logo.png"></a>
+            <div id="nav-shsid">
+                <a href="https://www.shsid.org/" style="text-decoration: none;">
+                    <img target='_blank' src="img/shsid_logo.png" alt="" id="nav-shsid-logo">
+                    <p id="nav-shsid-text" class="b"> 
+                        Shanghai High School <br>
+                        International Division
+                    </p>
+                </a>
+            </div>
         </nav>
     </header>
-    <ul id="menu-dropdown">
-        <li><a href="7/A/A/"><p><i class="fa-solid fa-leaf"></i>7/A/A</p></a></li>
-        <li><a href="C/1/8/"><p><i class="fa-solid fa-film"></i>Christchurch's <i>&#9;&#9;&#9;18 Minutes</i></p></a></li>
-        <li><a href="bio/"><p><i class="fa-solid fa-user"></i>About</p></a></li>
-        <li><a href="contact/"><p><i class="fa-solid fa-address-book"></i>Contact</p></a></li>
-    </ul>
     <main>
-        <div class="content body-a">
-        <p class="prh-a" style>Chapter IAA - Celebrating 17 Years <br> <a style="color: white!important;" href="I/A/A">Watch Trailer</a></p>
-        </div>
-        <div class="content body-b">
-            
-            <p class="prh-a"><img style="width: clamp(300px, 30vw, 300px);" src="img/Pasted Graphic.png" alt=""><br><a style="color: white!important;" href="p/the-liberty-bike/">Read Here</a></p>
+        <div id="fullpage">
+            <div class="section" id="main-div-a">
+                <div class="content">
+                    <p class="main-text">
+                        Chapter IAA - Celebrating 16 Years <br>
+                        <a href="I/A/A">Watch Trailer</a>
+                    </p>
+                </div>
             </div>
-    </main>
-    <footer>
-        <a href="../../"><img id="logo_ha" src="img/logo.png"></a>
-        <div id="social">
-            <a target='_blank' href="https://instagram.com/ryanrainnhe"><i class="fa-brands fa-instagram"></i></a>
-            <a target='_blank' href="https://youtube.com/@projectryanh"><i class="fa-brands fa-youtube"></i></a>
-            <a target='_blank' href="https://github.com/wyanhache"><i class="fa-brands fa-github"></i></a>
+            <div class="section" id="main-div-b">
+                <div class="content">
+                    <p class="main-text">
+                        <img src="img/Pasted Graphic.png" alt=""> <br>
+                        <a href="p/the-liberty-bike/">Read Here</a>
+                    </p>
+                </div>
+            </div>
+            <div class="section" id="main-div-c">
+                <div class="content">
+                    <p class="main-text">
+                        <img src="img/s2f2.png" alt=""><br>
+                            Christchurch's 18 Minutes <br>
+                            of Gunfire and Terror <br>
+                        <a href="C/1/8">Watch Here</a>
+                    </p>
+                </div>
+            </div>
+            <div class="section" id="main-div-d">
+                <div id="social">
+                    <a target='_blank' href="https://instagram.com/ryanrainnhe"><i class="fa-brands fa-instagram"></i></a>
+                    <a target='_blank' href="https://youtube.com/@projectryanh"><i class="fa-brands fa-youtube"></i></a>
+                    <a target='_blank' href="https://github.com/wyanhache"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <p class="main-text">© 2024 Shengyang He, All Rights Reserved.</p>
+            </div>
+
         </div>
-        <p>© 2024 Shengyang He, All Rights Reserved.</p>
-    </footer>
-    <script src="landing-page.js"></script>
+    </main>
 </body>
+<script src="img/fullpage.js">
+</script>
+<script>
+    new fullpage('#fullpage', {
+	//options here
+	autoScrolling:true,
+	scrollHorizontally: true
+});
+</script>
 </html>
