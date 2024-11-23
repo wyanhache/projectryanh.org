@@ -166,7 +166,7 @@ img[src="img/s2f2.png"] {
     left: 0;
     right: 0;
     z-index: -999;
-    background-image: url(img/Pasted\ Graphic\ 7.png);
+    background-image: url(img/c18.png);
     background-size: cover;
     border-radius: 1rem;
 }
@@ -211,6 +211,7 @@ img[src="img/s2f2.png"] {
     background-color: #131313;
     z-index: 999;
 }
+
 
 @media (max-width: 750px) {
     #nav-shsid {

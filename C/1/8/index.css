@@ -1,0 +1,147 @@
+@font-face {
+    font-family: "Pitch Sans Black";
+    src: url(../../../img/test-pitch-sans-bold.woff2);
+}
+
+@font-face {
+    font-family: "Newzald Book";
+    src: url(../../../img/test-newzald-book.woff2);
+}
+
+@font-face {
+    font-family: "Newzald Black";
+    src: url(../../../img/test-newzald-black.woff2);
+}
+
+@keyframes enlarge {
+    from {
+        font-size: 5rem
+    } to {
+        font-size: 5.5rem;
+    }
+}
+
+@keyframes ensmall {
+    from {
+        font-size: 5.5rem
+    } to {
+        font-size: 5rem;
+    }
+}
+
+@keyframes enclose {
+    from {
+        opacity: 20%;
+    } to {
+        opacity: 100%;
+    }
+}
+
+
+body, html {
+    background-color: #131313;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    color: #FFF;
+}
+
+#main-div-a p {
+    font-family: 'Newzald Black', Georgia, 'Times New Roman', Times, serif;
+    font-size: 6rem;
+}
+
+
+#text-wrapper {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5rem;
+    
+}
+
+span {
+    opacity: 0.2;
+}
+
+p {
+    text-align: center;
+}
+
+#text-wrapper p span:hover{
+    animation: enclose 200ms ease-in-out;
+    opacity: 100%;
+}
+
+#span-credits {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    opacity: 1;
+    font-size: 12px!important;
+    transform: translate(-50%, -50%);
+}
+
+#text-wrapper img {
+    width: clamp(200px, 20%, 20%)
+}
+
+
+iframe {
+    height: 90vh;
+    width: 95vw;
+}
+
+#video-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+}
+
+#main-div-a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -999;
+    background-image: url(../../../img/c18.png);
+    background-size: cover;
+    border-radius: 1rem;
+    opacity: 0.2;
+}
+
+#main-div-d {
+    height: 100px;
+}
+
+#main-div-d div {
+    color: #131313;
+    width: 100vw;
+    height: 100px;
+    z-index: 1000000001;
+
+}
+
+
+
+@media (max-width: 1200px) {
+    #main-div-a p {
+        font-family: 'Newzald Black', Georgia, 'Times New Roman', Times, serif;
+        font-size: 3rem;
+    }
+    p {
+        text-align: unset;
+    }
+}
+
