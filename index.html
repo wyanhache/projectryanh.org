@@ -17,9 +17,23 @@
     <meta property="og:image" content="https://projectryanh.org/img/IMG_1888.jpg">
 </head>
 <body>
+    <div id="blob">
+
+    </div>
     <header>
         <nav>
             <a href="#"><img id="nav-logo" src="img/logo.png"></a>
+            <button id="button">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div id="d">
+                <ul id="widescreen-links">
+                    <li><a href=""><p>About</p></a></li>
+                    <li><a href=""><p>Projects</p></a></li>
+                    <li><a href=""><p>Contact</p></a></li>
+                </ul>
+            </div>
+
             <div id="nav-shsid">
                 <a href="https://www.shsid.org/" style="text-decoration: none;">
                     <img target='_blank' src="img/shsid_logo.png" alt="" id="nav-shsid-logo">
@@ -31,6 +45,12 @@
             </div>
         </nav>
     </header>
+    <ul id="links">
+        <li><a href="7/A/A/"><p><i class="fa-solid fa-leaf"></i>7/A/A ></p></a></li>
+        <li><a href="C/1/8/"><p><i class="fa-solid fa-film"></i><b>Christchurch's</b> 18 Minutes ></p></a></li>
+        <li><a href="bio/"><p><i class="fa-solid fa-user"></i>About ></p></a></li>
+        <li><a href="contact/"><p><i class="fa-solid fa-address-book"></i>Contact ></p></a></li>
+    </ul>
     <main>
         <div id="fullpage">
             <div class="section" id="main-div-a">
@@ -65,7 +85,7 @@
                     <a target='_blank' href="https://youtube.com/@projectryanh"><i class="fa-brands fa-youtube"></i></a>
                     <a target='_blank' href="https://github.com/wyanhache"><i class="fa-brands fa-github"></i></a>
                 </div>
-                <p class="main-text">© 2024 Shengyang He, All Rights Reserved.</p>
+                <p id="credit-text">© 2024 Shengyang He, All Rights Reserved.</p>
             </div>
 
         </div>
@@ -78,6 +98,67 @@
 	//options here
 	autoScrolling:true,
 	scrollHorizontally: true
+});
+</script>
+<script>
+    const blob = document.getElementById("blob");
+    const target = document.getElementById("button");
+    const targets = document.querySelectorAll('.target')
+
+    document.body.onpointermove = event => {
+        const { clientX, clientY } = event;
+
+        blob.style.left = `${clientX}px`;
+        blob.style.top = `${clientY}px`
+    }
+
+
+// Function to check if the mouse is inside the target
+function isCursorInsideElement(mouseX, mouseY) {
+    const targetRect = target.getBoundingClientRect();
+    return (
+        mouseX >= targetRect.left &&
+        mouseX <= targetRect.right &&
+        mouseY >= targetRect.top &&
+        mouseY <= targetRect.bottom
+    );
+}
+let hasTriggered = false;
+// Event listener for mouse movement
+document.addEventListener('mousemove', (event) => {
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+
+
+    if (isCursorInsideElement(mouseX, mouseY)) {
+        if (!hasTriggered) {
+            hasTriggered = false;
+            blob.style.transition = 'height 0.1s cubic-bezier(0.25, 0.8, 0.25, 1)'
+            blob.style.height = '2rem';  // Change color when collision happens
+
+            setTimeout(() => {
+                blob.style.transition = 'none';
+            }, 100); // 100ms = 0.1s
+        }
+    } else {
+        blob.style.transition = 'unset'
+        blob.style.height = '1.5rem';  // Default color when no collision
+    }
+});
+document.getElementById('button').addEventListener('click', function() {
+    var menuDropdown = document.getElementById('links');
+    if (menuDropdown.classList.contains('show')) {
+        menuDropdown.classList.remove('show');
+    } else {
+        menuDropdown.classList.add('show');
+    }
+});
+
+document.querySelector('main').addEventListener('click', function() {
+    var menuDropdown = document.getElementById('links');
+    if (menuDropdown.classList.contains('show')) {
+        menuDropdown.classList.remove('show');
+    }
 });
 </script>
 </html>
