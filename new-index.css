@@ -124,6 +124,21 @@ nav:after {
     transform: translate(-50%, -50%);
 }
 
+#main-div-1 .content:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -999;
+    background-image: url(img/e87dbe5b4dd77a1c3846cea9dc5c5a.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+}
+
+
 #main-div-a .content:after {
     content: '';
     position: absolute;
@@ -304,11 +319,17 @@ button {
     gap: 3rem;
 }
 
+#widescreen-links li {
+    display: inline-block;
+    z-index: 999!important;
+}
+
 #d {
     position: absolute;
     top: 50%;
     left: 30%;
     translate: 0 -25%;
+    z-index: 999;
 }
 
 #credit-text {
@@ -316,4 +337,8 @@ button {
     z-index: 99900;
     color: #fff;
     margin: 1em;
+}
+
+b {
+    font-family: 'Newzald Black', Georgia, 'Times New Roman', Times, serif;
 }
