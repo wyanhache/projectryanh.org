@@ -268,7 +268,7 @@ img[src="img/s2f2.png"] {
 
 @media (max-width: 600px) {
     #opening-caption {
-        display: none;
+        display: none!important;
     }
 }
 
