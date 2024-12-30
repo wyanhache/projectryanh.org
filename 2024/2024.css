@@ -266,7 +266,7 @@ img[src="img/s2f2.png"] {
 }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 400px) {
     #opening-caption {
         display: none;
     }
