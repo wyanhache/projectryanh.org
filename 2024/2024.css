@@ -266,6 +266,12 @@ img[src="img/s2f2.png"] {
 }
 }
 
+@media (max-width: 450px) {
+    #opening-caption {
+        display: none;
+    }
+}
+
 @media (max-width: 1500px) {
     #nav-shsid-text {
         display: none;
