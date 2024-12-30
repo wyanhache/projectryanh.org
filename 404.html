@@ -21,6 +21,8 @@
 <body style="
 
     background-color: #131313;
+    height: 100vh;
+    width: 100vw;
     ">
         <header>
             <nav>
@@ -54,8 +56,6 @@
 
 <script>
     const blob = document.getElementById("blob");
-    const target = document.getElementById("button");
-    const targets = document.querySelectorAll('.target')
 
     document.body.onpointermove = event => {
         const { clientX, clientY } = event;
@@ -63,53 +63,4 @@
         blob.style.left = `${clientX}px`;
         blob.style.top = `${clientY}px`
     }
-
-
-// Function to check if the mouse is inside the target
-function isCursorInsideElement(mouseX, mouseY) {
-    const targetRect = target.getBoundingClientRect();
-    return (
-        mouseX >= targetRect.left &&
-        mouseX <= targetRect.right &&
-        mouseY >= targetRect.top &&
-        mouseY <= targetRect.bottom
-    );
-}
-let hasTriggered = false;
-// Event listener for mouse movement
-document.addEventListener('mousemove', (event) => {
-    const mouseX = event.clientX;
-    const mouseY = event.clientY;
-
-
-    if (isCursorInsideElement(mouseX, mouseY)) {
-        if (!hasTriggered) {
-            hasTriggered = false;
-            blob.style.transition = 'height 0.1s cubic-bezier(0.25, 0.8, 0.25, 1)'
-            blob.style.height = '2rem';  // Change color when collision happens
-
-            setTimeout(() => {
-                blob.style.transition = 'none';
-            }, 100); // 100ms = 0.1s
-        }
-    } else {
-        blob.style.transition = 'unset'
-        blob.style.height = '1.5rem';  // Default color when no collision
-    }
-});
-document.getElementById('button').addEventListener('click', function() {
-    var menuDropdown = document.getElementById('links');
-    if (menuDropdown.classList.contains('show')) {
-        menuDropdown.classList.remove('show');
-    } else {
-        menuDropdown.classList.add('show');
-    }
-});
-
-document.querySelector('main').addEventListener('click', function() {
-    var menuDropdown = document.getElementById('links');
-    if (menuDropdown.classList.contains('show')) {
-        menuDropdown.classList.remove('show');
-    }
-});
 </script>
