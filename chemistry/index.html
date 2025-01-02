@@ -1,0 +1,686 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Chemistry Notes Packet</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="169d183c-3f17-80ce-ba4a-ee38e03365c6" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/nasa_robert_stewart_spacewalk.jpg" style="object-position:center 40%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🧪</span></div><h1 class="page-title">Chemistry Notes Packet</h1><p class="page-description"></p></header><div class="page-body"><h3 id="169d183c-3f17-8016-a7fb-e55be7cf438a" class="">4.1 General Properties of Aqueous Solutions</h3><p id="169d183c-3f17-803f-989f-d9bca388d98f" class=""><code>Aqueous Solution</code> - a <code>solution</code> where the <code>solvent</code> is water.</p><ul id="169d183c-3f17-80fb-907b-f474a9d6369a" class="bulleted-list"><li style="list-style-type:disc"><code>Solution</code> - a kind of <code>homogenous mixture</code><ul id="169d183c-3f17-808d-84da-d70f367f88fd" class="bulleted-list"><li style="list-style-type:circle"><code>Homogenous mixture</code> - a physical combination of 2 or more substances that have one phase → uniform composition</li></ul></li></ul><ul id="169d183c-3f17-8093-b65e-f4dbdbf6b5a9" class="bulleted-list"><li style="list-style-type:disc">Solutions have two parts - the <code>solute</code> and the <code>solvent</code><ul id="169d183c-3f17-8099-b5a3-e606bfc91d5b" class="bulleted-list"><li style="list-style-type:circle"><code>Solute</code> - the substance that appears in smaller amounts</li></ul><ul id="169d183c-3f17-807c-b0d8-eeccb459ea42" class="bulleted-list"><li style="list-style-type:circle"><code>Solvent</code> - the substance that appears in larger amounts</li></ul></li></ul><ul id="169d183c-3f17-80a0-8378-f94e9d13ec92" class="bulleted-list"><li style="list-style-type:disc"><code>Dissolution</code> - the process of a solvent being <code>dissolved</code> into the solvent to form a solution</li></ul><ul id="169d183c-3f17-8047-9529-ca7b0eee4c06" class="bulleted-list"><li style="list-style-type:disc"><code>Dissociation</code> - the <code>separation of ions</code> that occurs when a solid ionic compound dissolves<ul id="169d183c-3f17-80cf-b324-fbcbf7e4dd96" class="bulleted-list"><li style="list-style-type:circle">This concludes in the separation of charges - <code>cations</code> <code>[+]</code>and <code>anions</code> <code>[-]</code>.</li></ul></li></ul><h3 id="169d183c-3f17-8061-8e90-c6a28c16d281" class="">Electrolytes</h3><ul id="169d183c-3f17-80ad-bcff-cecfec3a2527" class="bulleted-list"><li style="list-style-type:disc">An <code>electrolyte</code> is a substance that dissolves in water. When an electrolyte dissolves, its ions also dissociate and make the solution <code>conductable</code>.<ul id="169d183c-3f17-8064-b819-c3d9a8d706f4" class="bulleted-list"><li style="list-style-type:circle">Many electrolytes are <code>ionic compounds</code>.</li></ul></li></ul><ul id="169d183c-3f17-801e-bf0b-d28d8e579568" class="bulleted-list"><li style="list-style-type:disc">A <code>non-electrolyte</code> is a substance that does not have its ions dissociate when dissolved in water. As such, it can not conduct electricity<ul id="169d183c-3f17-803f-bc26-f2ebc9f0a1c3" class="bulleted-list"><li style="list-style-type:circle">This goes to say that non-electrolytes <code>can</code> dissolve in water, but has <code>no ions to form</code> via dissociation. Non-electrolytes dissolve only as <code>molecules</code>.</li></ul><ul id="169d183c-3f17-8035-bbda-c3748b3e1a29" class="bulleted-list"><li style="list-style-type:circle">Many non-electrolytes are <code>molecular compounds</code>.<ul id="169d183c-3f17-8073-b708-f6717deb43dc" class="bulleted-list"><li style="list-style-type:square"><code>Molecular compounds</code> are compounds with no ionic structure, which means they are made up of atoms, not charged ions.</li></ul></li></ul></li></ul><h3 id="169d183c-3f17-80d9-a749-d743d13456c4" class="">Strong and Weak Electrolytes</h3><ul id="169d183c-3f17-8047-9b91-f6a88e2f171f" class="bulleted-list"><li style="list-style-type:disc">A <code>strong electrolyte</code> has high solubility in water, which means it readily dissolves and conducts electricity.<ul id="169d183c-3f17-801e-9409-f23b368ed59f" class="bulleted-list"><li style="list-style-type:circle">Note: all <code>ionic compounds</code> that are <code>soluble</code> in water are strong electrolytes. <code>E.g.: NaCl</code></li></ul><ul id="169d183c-3f17-8044-bcef-f8aec8c67a37" class="bulleted-list"><li style="list-style-type:circle">Note: some <code>molecular compounds</code> are strong electrolytes. <code>E.g., HCl [also a strong acid]</code></li></ul><ul id="169d183c-3f17-80de-b977-f9ad43f423c1" class="bulleted-list"><li style="list-style-type:circle">Strong electrolytes are <code>good conductors</code>. </li></ul></li></ul><ul id="169d183c-3f17-80fd-8302-d97e506125b9" class="bulleted-list"><li style="list-style-type:disc">A <code>weak electrolyte</code> has low solubility in water, which means it partially dissolves and conducts electricity for the portion that is dissolved.<ul id="169d183c-3f17-807a-8c63-d614be8bf3f0" class="bulleted-list"><li style="list-style-type:circle">Note: most weak electrolytes are <code>molecular compounds</code></li></ul><ul id="169d183c-3f17-8061-b0f1-c396a27a3443" class="bulleted-list"><li style="list-style-type:circle">Weak electrolytes are <code>weak conductors.</code></li></ul><ul id="169d183c-3f17-808e-a218-c45c24eab2e2" class="bulleted-list"><li style="list-style-type:circle">Note: do not separate weak electrons on the reactant side of reaction!</li></ul></li></ul><h3 id="169d183c-3f17-8005-85e9-eb56b505a7e7" class="">cont. Weak Electrolytes: Chemical Equilibrium</h3><figure id="169d183c-3f17-8006-899e-ff81abe9e4f2" class="image"><a href="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image.png"><img style="width:173.9973907470703px" src="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image.png"/></a></figure><ul id="169d183c-3f17-80e4-9591-c545159adb91" class="bulleted-list"><li style="list-style-type:disc">The double arrow is a signifier of chemical equilibrium, where both <code>dissociation</code> and <code>recombination</code> is happening. The processes are thus coined <code>reversible</code>.</li></ul><ul id="169d183c-3f17-807a-a073-e364d8519aa6" class="bulleted-list"><li style="list-style-type:disc">This is largely the case with weak electrolytes that do not dissociate completely into the solvent. </li></ul><h3 id="169d183c-3f17-80b7-a7a7-e9304b4502ee" class="">Dissociating - Breaking Ionic Bonds and Separating Ions</h3><ul id="169d183c-3f17-80bd-b3e5-e898a75ea133" class="bulleted-list"><li style="list-style-type:disc">Water is a polar molecule - its partial charges are both positive and negative, so it attracts both cations and anions.</li></ul><ul id="169d183c-3f17-8025-aa37-c565f309c451" class="bulleted-list"><li style="list-style-type:disc">When an ionic compound dissolves in water, water pulls on individual ions and <code>solvates</code> them.<ul id="169d183c-3f17-80c0-a411-ec728d9d86e1" class="bulleted-list"><li style="list-style-type:circle"><code>Solvation</code> is the process where an ion is surrounded by <code>water molecules</code>, arranged in a specific manner to attract the ion.</li></ul></li></ul><ul id="169d183c-3f17-805e-b9b9-fa5a1a902260" class="bulleted-list"><li style="list-style-type:disc">This happens only if the <code>hydration energy</code> is bigger than the <code>lattice energy</code>.</li></ul><figure id="169d183c-3f17-80c6-acad-f99ced13894d" class="image"><a href="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%201.png"><img style="width:419.9921875px" src="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%201.png"/></a><figcaption>the sodium <code>cation</code> is faced with the oxygen side of water, which has a negative partial charge. the chloride <code>anion</code> is faced with the hydrogen side.</figcaption></figure><h3 id="169d183c-3f17-807e-b550-ef8062056ab8" class="">4.2 Precipitation Reactions</h3><ul id="169d183c-3f17-80d7-a853-d310463283a2" class="bulleted-list"><li style="list-style-type:disc"><code>Precipitation reactions</code> happen with pairs of cations and anions attract each other so strongly that they <code>form solid compounds</code> called <code>precipitate</code>.<ul id="169d183c-3f17-801b-93d8-d87b1786ba35" class="bulleted-list"><li style="list-style-type:circle">The precipitate is <code>insoluble</code>.</li></ul></li></ul><figure id="169d183c-3f17-807b-92d5-c59a39f92e9c" class="image"><a href="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%202.png"><img style="width:707.9921875px" src="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%202.png"/></a><figcaption>Soluble: <code>nitrate</code>, <code>acetate</code>, <code>halogens [Cl, Br, I] anions</code>, <code>sulfate</code><br/>Insoluble: <br/><code>S anion</code>, <code>carbonate</code>, <code>phosphate</code>, <code>hydroxide</code></figcaption></figure><p id="169d183c-3f17-8025-97cf-f30a1d70ba96" class="">SOLUBLE EXCEPTIONS</p><ul id="169d183c-3f17-8073-a211-c2cf4411afb8" class="bulleted-list"><li style="list-style-type:disc">Halogens have exceptions to universal solubility with compounds of <code>silver</code>, <code>mercury</code>, <code>lead</code></li></ul><ul id="169d183c-3f17-8016-9506-f8d43d02cdac" class="bulleted-list"><li style="list-style-type:disc"><code>sulfate [SO42-]</code> has exceptions with <code>strontium, barium, mercury, and lead</code></li></ul><p id="169d183c-3f17-80e4-843c-f7460c2bca81" class="">INSOLUBLE EXCEPTIONS</p><ul id="169d183c-3f17-80da-9290-d3654aa2284f" class="bulleted-list"><li style="list-style-type:disc">All have exceptions with <code>Alkali metals</code> and <code>ammonium [NH4+]</code></li></ul><ul id="169d183c-3f17-8012-a2f4-d21c566a5ba9" class="bulleted-list"><li style="list-style-type:disc"><code>sulfur anion</code> and <code>hydroxide</code> has exceptions with <code>calcium, strontium, and barium</code></li></ul><h3 id="169d183c-3f17-8070-a084-edd9922b7bb2" class="">Metathesis Reactions </h3><ul id="169d183c-3f17-804d-934b-e620b93d5570" class="bulleted-list"><li style="list-style-type:disc"><code>Double replacement</code> reactions happen when</li></ul><figure id="169d183c-3f17-80ce-b64a-f2f85cca519d" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mi>X</mi><mo>+</mo><mi>B</mi><mi>Y</mi><mo>→</mo><mi>B</mi><mi>X</mi><mo>+</mo><mi>A</mi><mi>Y</mi></mrow><annotation encoding="application/x-tex">AX+BY\rarr BX+AY</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">BX</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span></span></div></figure><ul id="169d183c-3f17-80f3-a4ad-d55221ff6a38" class="bulleted-list"><li style="list-style-type:disc"><code>Precipitates</code> can form in this type of reaction</li></ul><ul id="169d183c-3f17-80d8-8def-fa7e12275d73" class="bulleted-list"><li style="list-style-type:disc">Any ions that do not interact with one another are called <code>spectator ions</code>; equations written without these ions are called <code>net ionic equations</code>.</li></ul><figure id="169d183c-3f17-807a-98aa-c5572bc92604" class="image"><a href="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/Screenshot_2024-12-27_at_21.36.21.png"><img style="width:419.9921875px" src="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/Screenshot_2024-12-27_at_21.36.21.png"/></a></figure><h3 id="169d183c-3f17-8088-9ead-cfd4da0fff85" class="">4.3 Acids, Bases, and Neutralization Reactions</h3><p id="169d183c-3f17-8047-a3aa-f52d9755e74d" class="">Both acids and bases dissociate into an acidic/basic agent and its <code>characteristic ion</code>.</p><h3 id="169d183c-3f17-8018-8e9e-e6289ee244eb" class="">Acid</h3><ul id="169d183c-3f17-8073-9cb5-e4be1f221286" class="bulleted-list"><li style="list-style-type:disc">An <code>acid</code> is a substance that dissociates in water to produce <code>hydrogen ions [H+]</code></li></ul><ul id="169d183c-3f17-8040-9de9-d86b75f2462b" class="bulleted-list"><li style="list-style-type:disc"><code>Mono</code>protic, <code>di</code>protic, and <code>tri</code>protic acids</li></ul><h3 id="169d183c-3f17-8005-859f-ed349c7de68c" class="">Hydronium</h3><ul id="169d183c-3f17-808d-909c-e27b73371b80" class="bulleted-list"><li style="list-style-type:disc">When an acid dissolves in water, the <code>[H+]</code> ion is strongly attached to the water molecule, which the acid donates to form <code>hydronium ion [H3O+] via </code></li></ul><figure id="169d183c-3f17-802c-aa76-de48da31441d" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mtext>HCl + H</mtext><mn>2</mn></msub><mtext>O</mtext><mo>=</mo><msup><mtext>Cl</mtext><mo>−</mo></msup><mo>+</mo><msub><mtext>H</mtext><mn>3</mn></msub><msup><mtext>O</mtext><mo>+</mo></msup></mrow><annotation encoding="application/x-tex">\text{HCl + H}_2\text{O}=\text{Cl}^-+\text{H}_3\text{O}^+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">HCl + H</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord text"><span class="mord">O</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.939em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord text"><span class="mord">Cl</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8557em;"><span style="top:-3.1473em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9946em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">H</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord text"><span class="mord">O</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8446em;"><span style="top:-3.1362em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span></span></span></span></span></div></figure><figure id="169d183c-3f17-800c-8bf4-dc04cd562c9d" class="image"><a href="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%203.png"><img style="width:419.984375px" src="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%203.png"/></a></figure><ul id="169d183c-3f17-80fe-b69f-d75741fa309b" class="bulleted-list"><li style="list-style-type:disc">for simplicity, use <code>[H+]</code>, as <code>(aq)</code> already accounts for the presence of water in the reaction.</li></ul><h3 id="169d183c-3f17-800e-a85c-d4a5ee319d9e" class="">Base</h3><ul id="169d183c-3f17-8072-a5c9-e4c80da91fac" class="bulleted-list"><li style="list-style-type:disc">A <code>base</code> is a substance that dissociates in water to either<ul id="169d183c-3f17-80a4-aca6-c7f8785e8320" class="bulleted-list"><li style="list-style-type:circle">produce <code>[OH-]</code> ions</li></ul><ul id="169d183c-3f17-801e-a43a-dcae0c4cdf03" class="bulleted-list"><li style="list-style-type:circle">or accept <code>[H+]</code> ions.</li></ul></li></ul><figure id="169d183c-3f17-80d8-95a9-d8ff03d51542" class="image"><a href="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%204.png"><img style="width:707.9296875px" src="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%204.png"/></a><figcaption>NH3 [ammonia] is a base, as it is able to accept a <code>[H+]</code> ion and produce an <code>[OH-]</code> ion.</figcaption></figure><figure id="169d183c-3f17-8017-a48a-e1cc96f7a9f7" class="image"><a href="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%205.png"><img style="width:373.984375px" src="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%205.png"/></a></figure><h3 id="169d183c-3f17-802d-acbd-ec8b6c904b77" class="">Strong Acid and Bases</h3><ul id="169d183c-3f17-80a9-a6cc-e1da121077b8" class="bulleted-list"><li style="list-style-type:disc"><code>Strong</code> acids and bases completely dissolve in water.</li></ul><figure id="169d183c-3f17-8013-ac87-e8ec173910ee" class="image"><a href="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%206.png"><img style="width:419.984375px" src="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%206.png"/></a></figure><ul id="169d183c-3f17-80f3-a862-cfa1e0f31cf8" class="bulleted-list"><li style="list-style-type:disc">Strong acids:<ul id="169d183c-3f17-80c7-b353-f0f07ce3af0c" class="bulleted-list"><li style="list-style-type:circle">H- heavy halogens (hydro-) <code>[Cl, Br, I]</code></li></ul><ul id="169d183c-3f17-80c3-8296-d6c4e53925c8" class="bulleted-list"><li style="list-style-type:circle">H- chlorics <code>[ClO3, ClO4]</code></li></ul><ul id="169d183c-3f17-804d-b26b-ecafc7675527" class="bulleted-list"><li style="list-style-type:circle">Nitric <code>HNO3</code></li></ul><ul id="169d183c-3f17-807d-8e5b-e28ff45f838d" class="bulleted-list"><li style="list-style-type:circle">Sulfuric <code>H2SO4</code></li></ul><p id="169d183c-3f17-8088-a5d6-f017df1229ba" class="">7 in total</p></li></ul><ul id="169d183c-3f17-8023-9712-ec9837dbff96" class="bulleted-list"><li style="list-style-type:disc">Strong bases:<ul id="169d183c-3f17-8002-91e8-ff3552402e6b" class="bulleted-list"><li style="list-style-type:circle">1A metal hydroxides <code>[Li, Na, K, Rb, Cs]</code></li></ul><ul id="169d183c-3f17-8021-b0ff-e4460a3cb91c" class="bulleted-list"><li style="list-style-type:circle">heavy 2A metal hydroxides <code>[Ca, Sr, Ba] trailing with (OH)2(2-)</code></li></ul></li></ul><p id="169d183c-3f17-8091-a650-e41ab09521d6" class="">All those not listed above are <code>weak</code> acids and bases.</p><ul id="169d183c-3f17-8006-9156-ffd6d91b2d43" class="bulleted-list"><li style="list-style-type:disc"><code>Weak</code> acids and bases partially dissociate.</li></ul><figure id="169d183c-3f17-807f-9c23-f58fe1b8b770" class="image"><a href="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%207.png"><img style="width:420px" src="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%207.png"/></a></figure><p id="169d183c-3f17-80c9-afec-eb098f541e04" class="">Note: only <code>soluble</code> and ionic molecular compounds are counted.</p><h3 id="169d183c-3f17-80d7-9dbb-f6b360f820f4" class="">Neutralization</h3><ul id="169d183c-3f17-8030-9eb3-cd0e72b6287d" class="bulleted-list"><li style="list-style-type:disc"><code>Acid-base neutralization reactions</code> have <code>acid</code> and <code>base</code> as reactants, and <code>salt</code> and <code>water (H2O)</code> as products. <ul id="169d183c-3f17-80d0-9ebb-ed50a6123378" class="bulleted-list"><li style="list-style-type:circle"><code>salt</code> is an ionic compound formed by the cation <code>[+]</code> of the <code>base</code> and the anion <code>[-]</code> of the <code>acid</code>.</li></ul></li></ul><figure id="169d183c-3f17-8049-8bb0-d3bc7d1559c0" class="image"><a href="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%208.png"><img style="width:419.9609375px" src="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%208.png"/></a><figcaption>Since hydroxide and hydrogen ions neutralize each other, their acidic/basic properties are destroyed to form water.</figcaption></figure><h3 id="169d183c-3f17-8084-849f-d2be9675790e" class="">Formation Special Cases</h3><ul id="169d183c-3f17-8061-a7a4-cd7bd9b72816" class="bulleted-list"><li style="list-style-type:disc">Gases can be produced via exchange reactions</li></ul><ul id="169d183c-3f17-804c-96c6-d7374de0dc81" class="bulleted-list"><li style="list-style-type:disc"><code>Carbonic Acid (H2CO3) decomposes into:</code></li></ul><figure id="169d183c-3f17-80f7-bb46-f3c568a24ed4" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>H</mi><mn>2</mn></msub><mi>C</mi><msub><mi>O</mi><mn>3</mn></msub><mo>→</mo><msub><mi>H</mi><mn>2</mn></msub><msub><mi>O</mi><mrow><mo stretchy="false">(</mo><mi>l</mi><mo stretchy="false">)</mo></mrow></msub><mo>+</mo><mi>C</mi><msub><mi>O</mi><mrow><mn>2</mn><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></msub></mrow><annotation encoding="application/x-tex">H_2CO_3\rarr H_2O_{(l)}+CO_{2{(g)}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0385em;vertical-align:-0.3552em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0385em;vertical-align:-0.3552em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">g</span><span class="mclose mtight">)</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span></span></span></span></span></div></figure><h3 id="169d183c-3f17-80a4-8c93-dab2b0aca3eb" class="">4.4 Single Replacement Reactions</h3><figure id="169d183c-3f17-80b9-a6ac-eb0fe77d2a16" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mi>X</mi><mo>+</mo><mi>B</mi><mo>→</mo><mi>B</mi><mi>X</mi><mo>+</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">AX+B\rarr BX+A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">BX</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span></span></div></figure><ul id="169d183c-3f17-8088-8d48-f09d11f49f9d" class="bulleted-list"><li style="list-style-type:disc">Use the <code>Reactivity series</code> to determine whether an incoming metal should replace the compound’s metal cation.</li></ul><figure id="169d183c-3f17-80ab-a3e9-dfdf0367d03e" class="image"><a href="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%209.png"><img style="width:419.9921875px" src="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%209.png"/></a></figure><figure id="169d183c-3f17-8083-9398-d313f5c9cc94" class="image"><a href="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%2010.png"><img style="width:419.9921875px" src="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%2010.png"/></a></figure><figure id="169d183c-3f17-80f1-960b-f283b4453714" class="image"><a href="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/Screenshot_2024-12-27_at_22.41.58.png"><img style="width:707.9921875px" src="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/Screenshot_2024-12-27_at_22.41.58.png"/></a></figure><figure id="169d183c-3f17-80c4-96f9-fe72715cf554" class="image"><a href="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/Screenshot_2024-12-27_at_22.55.12.png"><img style="width:707.9921875px" src="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/Screenshot_2024-12-27_at_22.55.12.png"/></a></figure><ul id="169d183c-3f17-8068-9728-e4cb67ee4d75" class="bulleted-list"><li style="list-style-type:disc">Halogens get darker as they go down a group. When they get replaced, the color shows.</li></ul><h1 id="169d183c-3f17-80c6-8d30-e3e369602efe" class="">Chapter 10</h1><h3 id="16ad183c-3f17-801f-b744-e98a4d2c8b4f" class="">10.1 Characteristics of Gases</h3><ul id="16ad183c-3f17-808f-965d-e36960581cbf" class="bulleted-list"><li style="list-style-type:disc">Gas is the phase with the highest energy, which means they are formed when <code>temperatures</code> are high enough.</li></ul><ul id="16ad183c-3f17-8001-a21d-ccac97a2450e" class="bulleted-list"><li style="list-style-type:disc">Gases have high kinetic energy, which overcomes the intermolecular forces</li></ul><ul id="16ad183c-3f17-804a-91d2-c6af3403b77f" class="bulleted-list"><li style="list-style-type:disc">Phenomenonally, this means that <ul id="16ad183c-3f17-8014-a816-eb12382eff83" class="bulleted-list"><li style="list-style-type:circle">Gases don’t have a set <code>shape</code>;</li></ul><ul id="16ad183c-3f17-807d-9690-d4df4b5b22e6" class="bulleted-list"><li style="list-style-type:circle">Gases don’t have a set <code>volume</code>, they inherit their container’s volume;</li></ul><ul id="16ad183c-3f17-8010-b7af-e04df64a0283" class="bulleted-list"><li style="list-style-type:circle">Gases are usually very <code>spread apart</code>, and as such gases are very <code>compressable</code>.</li></ul><ul id="16ad183c-3f17-8063-9462-dcb71f8e5f22" class="bulleted-list"><li style="list-style-type:circle">Gases usually move <code>randomly</code>.</li></ul></li></ul><ul id="16ad183c-3f17-8005-b076-e44a22d0dc7e" class="bulleted-list"><li style="list-style-type:disc">Two or more gases form a <code>homogenous mixture</code>.</li></ul><h3 id="16ad183c-3f17-80f5-887b-d7cb3ba171b8" class="">10.2 Pressure</h3><ul id="16ad183c-3f17-80af-a589-c87778d66c71" class="bulleted-list"><li style="list-style-type:disc">given as the ratio between force applied on an object and the surface area on which it’s exerted.</li></ul><figure id="16ad183c-3f17-80f6-886a-f7c43f01ad3b" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo>=</mo><mfrac><mi>F</mi><mi>A</mi></mfrac></mrow><annotation encoding="application/x-tex">P= {F \over A }</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">A</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></span></div></figure><ul id="16ad183c-3f17-808c-90f4-d446c1b4ba33" class="bulleted-list"><li style="list-style-type:disc">The <code>standard atmospheric pressure</code> <code>(atm)</code> is the pressure exerted on the Earth’s surface by all the air particles in the atmosphere on a <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><msup><mi>m</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1m^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> surface area.</li></ul><ul id="16ad183c-3f17-8082-97e3-d66278c72940" class="bulleted-list"><li style="list-style-type:disc">The <code>gauge pressure</code> is the pressure relative to the <code>atmospheric pressure</code> at that point.<p id="16ad183c-3f17-8051-a68a-d98507c65b5b" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>G</mi></msub><mo>=</mo><msub><mi>P</mi><mrow><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi></mrow></msub><mo>−</mo><msub><mi>P</mi><mi>A</mi></msub></mrow><annotation encoding="application/x-tex">P_G=P_{total}-P_A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">o</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">A</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></p></li></ul><ul id="16ad183c-3f17-8034-ba9b-c144ea67cc35" class="bulleted-list"><li style="list-style-type:disc">The <code>absolute pressure</code> is the aggregation of the <code>atmospheric pressure</code> and the <code>gauge pressure</code>.</li></ul><figure id="16ad183c-3f17-80e9-8930-f173c77ab9b0" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>1</mn><mi>a</mi><mi>t</mi><mi>m</mi><mo>=</mo><mn>101325</mn><mi>P</mi><mi>a</mi><mo>=</mo><mn>101325</mn><mi>N</mi><mi mathvariant="normal">/</mi><msup><mi>m</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1atm =101325Pa=101325 N/m^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span><span class="mord mathnormal">a</span><span class="mord mathnormal">t</span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">101325</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1141em;vertical-align:-0.25em;"></span><span class="mord">101325</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord">/</span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></div></figure><figure id="16ad183c-3f17-8084-9ebb-d64b4c77865d" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>1</mn><mi>b</mi><mi>a</mi><mi>r</mi><mo>=</mo><mn>100000</mn><mi>P</mi><mi>a</mi><mo>=</mo><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup><mi>N</mi><mi mathvariant="normal">/</mi><msup><mi>m</mi><mn>2</mn></msup><mo>=</mo><mstyle mathcolor="#FAC67A"><mn>100</mn><mi>k</mi><mi>P</mi><mi>a</mi></mstyle></mrow><annotation encoding="application/x-tex">1bar= 100000 Pa = 10^5N/m^2 = \color{FAC67A}100 kPa</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">1</span><span class="mord mathnormal">ba</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">100000</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1141em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord">/</span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord" style="color:#FAC67A;">100</span><span class="mord mathnormal" style="margin-right:0.03148em;color:#FAC67A;">k</span><span class="mord mathnormal" style="margin-right:0.13889em;color:#FAC67A;">P</span><span class="mord mathnormal" style="color:#FAC67A;">a</span></span></span></span></span></div></figure><figure id="16ad183c-3f17-808a-89fc-e5c6a6d69d00" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>1</mn><mi>a</mi><mi>t</mi><mi>m</mi><mo>=</mo><mn>1.01325</mn><mi>b</mi><mi>a</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1atm=1.01325bar</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span><span class="mord mathnormal">a</span><span class="mord mathnormal">t</span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">1.01325</span><span class="mord mathnormal">ba</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span></span></div></figure><p id="16ad183c-3f17-80e3-8ccf-d5fae7655f29" class=""><code>STP</code> is standard temperature and pressure</p><figure id="16ad183c-3f17-80b7-990b-c8e1ac38c7d5" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>S</mi><mi>T</mi><mi>P</mi><mo>=</mo><mn>0</mn><mi mathvariant="normal">°</mi><mi>C</mi><mtext>     </mtext><mn>100</mn><mi>k</mi><mi>P</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">STP=0\degree C \ \ \ \ \ 100kPa</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">STP</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">0°</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mord">100</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal">a</span></span></span></span></span></div></figure><ul id="16ad183c-3f17-8077-894b-f64dc320705f" class="bulleted-list"><li style="list-style-type:disc">Any mole takes up <code>22.4L</code> of volume in STP</li></ul><figure id="16ad183c-3f17-8064-a517-d748b5b742ad" class="image"><a href="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%2011.png"><img style="width:720px" src="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%2011.png"/></a></figure><h3 id="16ad183c-3f17-80d2-86c2-e594303ecf2f" class="">Barometer</h3><ul id="16ad183c-3f17-807a-adde-cb11cffc0364" class="bulleted-list"><li style="list-style-type:disc">A device to gauge pressure</li></ul><ul id="16ad183c-3f17-8019-ab4d-cda43403234f" class="bulleted-list"><li style="list-style-type:disc">the height of the tube rises when atmospheric pressure is higher; the height of the tube lowers lowers when atmospheric pressure decreases.</li></ul><figure id="16ad183c-3f17-80fd-847c-ec95c10204c9" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>1</mn><mi>a</mi><mi>t</mi><mi>m</mi><mo>=</mo><mn>76</mn><mi>c</mi><mi>m</mi><mi>H</mi><mi>g</mi><mo>=</mo><mn>760</mn><mi>m</mi><mi>m</mi><mi>H</mi><mi>g</mi><mo>=</mo><mn>760</mn><mi>t</mi><mi>o</mi><mi>r</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1atm=76cmHg=760mmHg = 760 torr</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span><span class="mord mathnormal">a</span><span class="mord mathnormal">t</span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">76</span><span class="mord mathnormal">c</span><span class="mord mathnormal">m</span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">760</span><span class="mord mathnormal">mm</span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">760</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.02778em;">orr</span></span></span></span></span></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16ad183c-3f17-80a7-ac1d-cee87060064b"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="46cd707b-4068-48cc-85fc-bf79fb390f2d" class="">It is easier to drink from a straw on a planet that has <code>lower atmospheric pressure</code>.</p><ul id="16ad183c-3f17-80e1-96fb-c561224bb75d" class="bulleted-list"><li style="list-style-type:disc">This is because a lower difference between the pressure inside and outside of the straw is needed to draw the liquid out.</li></ul></div></figure><h3 id="16ad183c-3f17-8010-8257-e084772f9730" class="">10.3 Gas Laws</h3><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16ad183c-3f17-80e1-a38c-f266d9feb588"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="6c19fa28-3cbf-4f2e-809c-2529eca2d102" class=""><code><strong>Ideal Gas Law</strong></code></p><p id="16ad183c-3f17-80eb-ac3f-c73d29541dcc" class="">A law that applies to theoretical gases that </p><ul id="16ad183c-3f17-8045-aad9-e940f40032ee" class="bulleted-list"><li style="list-style-type:disc">do not have <code>interparticular interactions</code></li></ul><ul id="16ad183c-3f17-806a-9183-e174ecfec7dd" class="bulleted-list"><li style="list-style-type:disc">have a combined volume much smaller than its actual volume</li></ul><figure id="16ad183c-3f17-807d-8ae0-fe2656e4936f" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mi>V</mi><mo>=</mo><mi>n</mi><mi>R</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">PV=nRT</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.13889em;">RT</span></span></span></span></span></div></figure><p id="16ad183c-3f17-807c-ad9f-f090e4bfab31" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mn>8.314</mn><mi>J</mi><mi mathvariant="normal">/</mi><mi>m</mi><mi>o</mi><mi>l</mi><mo>⋅</mo><mi>K</mi><mtext> </mtext><mi>o</mi><mi>r</mi><mtext> </mtext><mn>0.08206</mn><mi>L</mi><mo>⋅</mo><mi>a</mi><mi>t</mi><mi>m</mi><mi mathvariant="normal">/</mi><mi>m</mi><mi>o</mi><mi>l</mi><mo>⋅</mo><mi>K</mi></mrow><annotation encoding="application/x-tex">R = 8.314 J/mol\cdot K \ or \ 0.08206 L\cdot atm/mol \cdot K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">8.314</span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="mord">/</span><span class="mord mathnormal">m</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mspace"> </span><span class="mord mathnormal" style="margin-right:0.02778em;">or</span><span class="mspace"> </span><span class="mord">0.08206</span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">a</span><span class="mord mathnormal">t</span><span class="mord mathnormal">m</span><span class="mord">/</span><span class="mord mathnormal">m</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span></span><span>﻿</span></span></p></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16ad183c-3f17-808b-8876-c9b924c72315"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="985a0a13-b554-4186-93de-3d7433b8291d" class="">Boyle’s Law - <code>P</code> and <code>V</code></p><ul id="16ad183c-3f17-801f-9f38-cf0d353684c8" class="bulleted-list"><li style="list-style-type:disc">prerequisite: <code>T</code> and <code>n</code> (number of molecules) const.<figure id="16ad183c-3f17-805a-a256-d71f6e78272c" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mi>V</mi><mo>=</mo><mi>k</mi><mo separator="true">;</mo><msub><mi>P</mi><mn>1</mn></msub><msub><mi>V</mi><mn>1</mn></msub><mo>=</mo><msub><mi>P</mi><mn>2</mn></msub><msub><mi>V</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">PV=k; P_1V_1=P_2V_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></div></figure></li></ul><figure id="16ad183c-3f17-8081-bf88-f9d4abed2fdd" class="image"><a href="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%2012.png"><img style="width:336px" src="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%2012.png"/></a></figure></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16ad183c-3f17-80b8-ae57-d303789cc287"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="9de2e02e-3cc7-4564-a941-ac208bafc903" class="">Charles’ Law - <code>V</code> and <code>T</code></p><ul id="16ad183c-3f17-8039-9b6b-e8d599a15611" class="bulleted-list"><li style="list-style-type:disc">prerequisite: <code>P</code> and <code>n</code> const.</li></ul><p id="16ad183c-3f17-808a-8ba8-e4106f26d38f" class="">NOTE: USE <code>KELVIN</code> FOR ALL OPERATIONS</p><figure id="16ad183c-3f17-80c1-a1b2-ef3d38aa5c62" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mi>V</mi><mi>T</mi></mfrac><mo>=</mo><mtext>constant</mtext><mo separator="true">;</mo><mfrac><msub><mi>V</mi><mn>1</mn></msub><msub><mi>T</mi><mn>1</mn></msub></mfrac><mo>=</mo><mfrac><msub><mi>V</mi><mn>2</mn></msub><msub><mi>T</mi><mn>2</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">{V \over T } = \text{constant}; \frac{V_1}{T_1} = \frac{V_2}{T_2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1963em;vertical-align:-0.836em;"></span><span class="mord text"><span class="mord">constant</span></span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1963em;vertical-align:-0.836em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div></figure></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16ad183c-3f17-80f4-aada-deb0ceab996b"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="681f70e6-641e-44c2-abcc-4f378efa74e5" class="">Avogadro’s Law - <code>V</code> and <code>n</code></p><ul id="16ad183c-3f17-802d-bfd6-da0169329bce" class="bulleted-list"><li style="list-style-type:disc">prerequisite: <code>P</code> and <code>T</code> const.</li></ul><figure id="16ad183c-3f17-8052-8c33-e7feb8f8fb99" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mi>V</mi><mi>n</mi></mfrac><mo>=</mo><mtext>constant</mtext><mo separator="true">;</mo><mfrac><msub><mi>V</mi><mn>1</mn></msub><msub><mi>n</mi><mn>1</mn></msub></mfrac><mo>=</mo><mfrac><msub><mi>V</mi><mn>2</mn></msub><msub><mi>n</mi><mn>2</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">{V \over n } = \text{constant}; \frac{V_1}{n_1} = \frac{V_2}{n_2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">n</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1963em;vertical-align:-0.836em;"></span><span class="mord text"><span class="mord">constant</span></span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1963em;vertical-align:-0.836em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div></figure></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16ad183c-3f17-807a-9bc3-fd2cc0d3a2ec"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="ca067a98-4dcc-43c8-910f-2324488c5b60" class="">Gay-Lussac’s Law - <code>P</code> and <code>T</code></p><ul id="16ad183c-3f17-8008-a7a9-d19cb98f8553" class="bulleted-list"><li style="list-style-type:disc">prerequisite: <code>V</code> and <code>n</code> const.</li></ul><figure id="16ad183c-3f17-8047-b20f-f8504556c909" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mi>P</mi><mi>T</mi></mfrac><mo>=</mo><mtext>constant</mtext><mo separator="true">;</mo><mfrac><msub><mi>P</mi><mn>1</mn></msub><msub><mi>T</mi><mn>1</mn></msub></mfrac><mo>=</mo><mfrac><msub><mi>P</mi><mn>2</mn></msub><msub><mi>T</mi><mn>2</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">{P\over T } = \text{constant}; \frac{P_1}{T_1} = \frac{P_2}{T_2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1963em;vertical-align:-0.836em;"></span><span class="mord text"><span class="mord">constant</span></span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1963em;vertical-align:-0.836em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div></figure></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16ad183c-3f17-8088-b315-ded5c3055fa1"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="651df14f-8330-46f3-8380-4bb8f6bd7cf6" class="">Combined Gas Law</p><figure id="16ad183c-3f17-8079-9054-f2103a94057c" class="image"><a href="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%2013.png"><img style="width:358px" src="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%2013.png"/></a></figure></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16ad183c-3f17-805c-bb7f-f1d6dfc1ea73"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="0d31cdb4-b604-4046-87e4-fae74739e63f" class="">Dalton’s Law of Partial Pressures</p><ul id="16ad183c-3f17-8015-8dc7-e92cdd24ec3c" class="bulleted-list"><li style="list-style-type:disc">concerns <code>P</code>.</li></ul><figure id="16ad183c-3f17-8032-9873-fda49916054c" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>P</mi><mi>t</mi></msub><mo>=</mo><msub><mi>P</mi><mn>1</mn></msub><mo>+</mo><msub><mi>P</mi><mn>2</mn></msub><mo>+</mo><msub><mi>P</mi><mn>3</mn></msub><mo>+</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">P_t=P_1+P_2+P_3+...</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.1056em;"></span><span class="mord">...</span></span></span></span></span></div></figure></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16ad183c-3f17-80e8-a029-e52446b669ab"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="6688cd99-abfc-4e99-aa21-2392dd78a136" class="">Partial Pressures and Mole Fractions</p><p id="16ad183c-3f17-8049-8008-c0b8f80ba6e9" class="">partial pressure v. mole fractions:</p><p id="16ad183c-3f17-80c2-ab43-c0e05c229d7c" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathsize="2.074em"><mrow><mfrac><msub><mi>P</mi><mn>1</mn></msub><msub><mi>P</mi><mi>t</mi></msub></mfrac><mo>=</mo><mfrac><msub><mi>n</mi><mn>1</mn></msub><msub><mi>n</mi><mi>t</mi></msub></mfrac></mrow></mstyle></mrow><annotation encoding="application/x-tex">\huge{{P_1 \over P_t} = \frac{n_1}{n_t}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.8609em;vertical-align:-0.9571em;"></span><span class="mord sizing reset-size6 size10"><span class="mord"><span class="mord"><span class="mopen nulldelimiter sizing reset-size10 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9179em;"><span style="top:-3.095em;"><span class="pstrut" style="height:3.44em;"></span><span class="sizing reset-size10 size8 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-3.0322em;margin-left:-0.1389em;margin-right:0.0347em;"><span class="pstrut" style="height:3.2em;"></span><span class="sizing reset-size8 size7 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1678em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.67em;"><span class="pstrut" style="height:3.44em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.8835em;"><span class="pstrut" style="height:3.44em;"></span><span class="sizing reset-size10 size8 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-3.0078em;margin-left:-0.1389em;margin-right:0.0347em;"><span class="pstrut" style="height:3.2em;"></span><span class="sizing reset-size8 size7 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1922em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4615em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size10 size6"></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mopen nulldelimiter sizing reset-size10 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7424em;"><span style="top:-3.095em;"><span class="pstrut" style="height:3.44em;"></span><span class="sizing reset-size10 size8 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-3.0322em;margin-left:0em;margin-right:0.0347em;"><span class="pstrut" style="height:3.2em;"></span><span class="sizing reset-size8 size7 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1678em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.67em;"><span class="pstrut" style="height:3.44em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.8835em;"><span class="pstrut" style="height:3.44em;"></span><span class="sizing reset-size10 size8 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-3.0078em;margin-left:0em;margin-right:0.0347em;"><span class="pstrut" style="height:3.2em;"></span><span class="sizing reset-size8 size7 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1922em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4615em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size10 size6"></span></span></span></span></span></span></span><span>﻿</span></span> if <code>T</code> and <code>V</code> const.</p><p id="16ad183c-3f17-80d1-ac69-cd311688807e" class="">
+</p></div></figure><h3 id="16ad183c-3f17-800e-b048-e1a90a2e12be" class="">10.5 Further Applications of the Ideal-Gas Law</h3><figure id="16ad183c-3f17-8058-8d2c-ebb01ea004ce" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mo>=</mo><mfrac><mi>m</mi><mi>v</mi></mfrac><mo>=</mo><mfrac><mrow><mi>P</mi><mi>M</mi></mrow><mrow><mi>R</mi><mi>T</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">d={m\over v}=\frac{PM}{RT}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.7936em;vertical-align:-0.686em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">RT</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">PM</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div></figure><figure id="16ad183c-3f17-805b-ab4a-ce6349a76272" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>M</mi><mo>=</mo><mfrac><mrow><mi>d</mi><mi>R</mi><mi>T</mi></mrow><mi>P</mi></mfrac></mrow><annotation encoding="application/x-tex">M=\frac{dRT}{P}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.13889em;">RT</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div></figure><figure id="16ad183c-3f17-8095-958a-e82b81092f0d" class="image"><a href="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%2014.png"><img style="width:419.9921875px" src="Chemistry%20Notes%20Packet%20169d183c3f1780ceba4aee38e03365c6/image%2014.png"/></a></figure><h3 id="16ad183c-3f17-80ea-a1bf-cd7effff959b" class="">10.7 Kinetic-Molecular Theory</h3><ol type="1" id="16ad183c-3f17-80e8-8bfc-f0eb054d4a8f" class="numbered-list" start="1"><li>Gases are made of particles; these particles are always in motion. These particles always travel in straight lines unless they hit something, like another particle or its container.<ul id="16ad183c-3f17-8001-b23d-c275781d2dfc" class="bulleted-list"><li style="list-style-type:disc">This lays out that these particles are subject to macroscopic laws of motion.</li></ul></li></ol><ol type="1" id="16ad183c-3f17-80e2-84fd-c21c9bb0446c" class="numbered-list" start="2"><li>The gas is mostly empty space; particles can be regarded as dimensionless points.</li></ol><ol type="1" id="16ad183c-3f17-8007-b1ca-f93171003634" class="numbered-list" start="3"><li>Pressure is the act of gas particles imparting some kinetic energy unto the walls of the container.</li></ol><ol type="1" id="16ad183c-3f17-80ab-a8c9-dc8f5aa2d004" class="numbered-list" start="4"><li>Assume particles cannot exert any gravitational or magnetic interactions, as well as dipole-dipole interactions.<ul id="16ad183c-3f17-806b-97af-fc46da8bfb22" class="bulleted-list"><li style="list-style-type:disc">This assumes that ideal gas collisions are completely elastic.</li></ul></li></ol><ol type="1" id="16ad183c-3f17-8029-a4c1-c1f851cd47ed" class="numbered-list" start="5"><li>Temperature is proportional to the average kinetic energy in a system.<ul id="16ad183c-3f17-80ec-a957-cc180e4a3a53" class="bulleted-list"><li style="list-style-type:disc">If you increase temperature, particles have more average kinetic energy.</li></ul></li></ol><p id="16ad183c-3f17-80bd-9fec-fd6b9f047d9f" class="">→ Applications to all derivatives of the <code>ideal gas law</code></p><p id="16ad183c-3f17-8013-b70d-dea4052be7bb" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
