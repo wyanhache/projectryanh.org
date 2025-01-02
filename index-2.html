@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <title>projectryanh.org > /</title>
+    <link rel="icon" type="image/x-icon" href="img/1f320.ico">
+    <script src="https://kit.fontawesome.com/7308cf0505.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="new-index copy.css">
+    <link rel="stylesheet" href="img/fullpage.css">
+
+    <meta property="og:url" content="https://projectryanh.org">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="projectryanh.org > /">
+    <meta property="og:title" content="projectryanh.org > Main Page">
+    <meta property="og:description" content="projectryanh is the Project Archive of Ryan H @ SHSID '27.">
+    <meta property="og:image" content="https://projectryanh.org/img/IMG_1888.jpg">
+    <style>
+        body, html {
+            scroll-snap-stop: always;
+            scroll-snap-type: y mandatory;
+            overscroll-behavior: none;
+        }
+        header, nav, .FUCKERSHIT { scroll-snap-align: start; }
+        .section { scroll-snap-align: center; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#"><img id="nav-logo" src="img/logo.png"></a>
+            <button id="button">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div id="d">
+                <ul id="widescreen-links">
+                    <li><a href="2024/"><p><b>2024 in Review</b></p></a></li>
+                    <li><a href="projects"><p>Projects</p></a></li>
+                    <li><a href="p/"><p>Writing</p></a></li>
+                    <li><a href="contact/"><p>Contact</p></a></li>
+                </ul>
+            </div>
+
+            <div id="nav-shsid">
+                <a href="https://www.shsid.org/" style="text-decoration: none;">
+                    <img target='_blank' src="img/shsid_logo.png" alt="" id="nav-shsid-logo">
+                    <p id="nav-shsid-text" class="b"> 
+                        Shanghai High School <br>
+                        International Division
+                    </p>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <ul id="links">
+        <li><a href="7/A/A/"><p><i class="fa-solid fa-leaf"></i>7/A/A ></p></a></li>
+        <li><a href="C/1/8/"><p><i class="fa-solid fa-film"></i><b>Christchurch's</b> 18 Minutes ></p></a></li>
+        <li><a href="bio/"><p><i class="fa-solid fa-user"></i>About ></p></a></li>
+        <li><a href="contact/"><p><i class="fa-solid fa-address-book"></i>Contact ></p></a></li>
+    </ul>
+    <main>
+        <div id="fullpage">
+            <div class="section" id="main-div-1">
+                <div class="content">
+                    <p class="main-text">
+                        Ryan He is a Sophomore polymath <br> based in Shanghai, China. <br>
+                        <a href="#">Scroll to see more</a>
+                    </p>
+                </div>
+            </div>
+            <div class="section" id="main-div-a">
+                <a href="" id="iaa"></a>
+                <div class="content">
+                    <p class="main-text">
+                        Chapter IAA - Celebrating 16 Years <br>
+                        <a href="I/A/A">Watch Trailer</a>
+                    </p>
+                </div>
+            </div>
+            <div class="section" id="main-div-b">
+                <div class="content">
+                    <p class="main-text">
+                        <img src="img/Pasted Graphic.png" alt=""> <br>
+                        <a href="p/the-liberty-bike/">Read Here</a>
+                    </p>
+                </div>
+            </div>
+            <div class="section" id="main-div-c">
+                <div class="content">
+                    <p class="main-text">
+                        <img src="img/s2f2.png" alt=""><br>
+                            Christchurch's 18 Minutes <br>
+                            of Gunfire and Terror <br>
+                        <a href="C/1/8">Watch Here</a>
+                    </p>
+                </div>
+            </div>
+            <div class="section" id="main-div-d">
+                <div id="social">
+                    <a target='_blank' href="https://instagram.com/ryanrainnhe"><i class="fa-brands fa-instagram"></i></a>
+                    <a target='_blank' href="https://youtube.com/@projectryanh"><i class="fa-brands fa-youtube"></i></a>
+                    <a target='_blank' href="https://github.com/wyanhache"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <p id="credit-text">© 2024 Shengyang He, All Rights Reserved.</p>
+            </div>
+
+        </div>
+    </main>
+</body>
+<!-- <script src="img/fullpage.js">
+</script>
+<script>
+    new fullpage('#fullpage', {
+	//options here
+	autoScrolling:true,
+	scrollHorizontally: true
+});
+</script> -->
+<div id="blob">
+
+</div>
+<script>
+    const blob = document.getElementById("blob");
+    const target = document.getElementById("button");
+    const targets = document.querySelectorAll('.target')
+
+    document.body.onpointermove = event => {
+        const { clientX, clientY } = event;
+
+        blob.style.left = `${clientX}px`;
+        blob.style.top = `${clientY}px`
+    }
+
+
+// Function to check if the mouse is inside the target
+function isCursorInsideElement(mouseX, mouseY) {
+    const targetRect = target.getBoundingClientRect();
+    return (
+        mouseX >= targetRect.left &&
+        mouseX <= targetRect.right &&
+        mouseY >= targetRect.top &&
+        mouseY <= targetRect.bottom
+    );
+}
+let hasTriggered = false;
+// Event listener for mouse movement
+document.addEventListener('mousemove', (event) => {
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+
+
+    if (isCursorInsideElement(mouseX, mouseY)) {
+        if (!hasTriggered) {
+            hasTriggered = false;
+            blob.style.transition = 'height 0.1s cubic-bezier(0.25, 0.8, 0.25, 1)'
+            blob.style.height = '2rem';  // Change color when collision happens
+
+            setTimeout(() => {
+                blob.style.transition = 'none';
+            }, 100); // 100ms = 0.1s
+        }
+    } else {
+        blob.style.transition = 'unset'
+        blob.style.height = '1.5rem';  // Default color when no collision
+    }
+});
+document.getElementById('button').addEventListener('click', function() {
+    var menuDropdown = document.getElementById('links');
+    if (menuDropdown.classList.contains('show')) {
+        menuDropdown.classList.remove('show');
+    } else {
+        menuDropdown.classList.add('show');
+    }
+});
+
+document.querySelector('main').addEventListener('click', function() {
+    var menuDropdown = document.getElementById('links');
+    if (menuDropdown.classList.contains('show')) {
+        menuDropdown.classList.remove('show');
+    }
+});
+</script>
+
+</html>

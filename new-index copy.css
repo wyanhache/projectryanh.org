@@ -1,0 +1,351 @@
+@font-face {
+    font-family: "Pitch Sans Black";
+    src: url(img/test-pitch-sans-bold.woff2);
+}
+
+@font-face {
+    font-family: "Newzald Book";
+    src: url(img/test-newzald-book.woff2);
+}
+
+@font-face {
+    font-family: "Newzald Black";
+    src: url(img/test-newzald-black.woff2);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    cursor: none!important;
+}
+
+p {
+    font-family: "Newzald Book", Georgia, 'Times New Roman', Times, serif
+}
+
+.b {
+    font-family: 'Newzald Black', Georgia, 'Times New Roman', Times, serif
+}
+
+#links {
+    position: relative;
+    background-color: #131313;
+    padding: 2rem 2rem 0 2rem;
+    display: none;
+}
+
+#links a {
+    text-decoration: none!important;
+    font-size: 1rem;
+}
+
+#links i { padding: 1rem;}
+
+#links.show {
+    display: block;
+}
+
+header {
+    background-color: #131313;
+    color: #fff;
+    position: sticky;
+    top:0;
+    width: 100vw;
+    height: 15vh;
+    z-index: 9999;
+}
+.FUCKERSHIT {
+    height: 20vh;
+    position: relative
+}
+
+#nav-logo {
+    position: absolute;
+    height: 90%;
+    padding: 1.5rem;
+    z-index: 2;
+}
+
+#nav-shsid-logo {
+    position: absolute;
+    height: 200%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#nav-shsid-text {
+    position: relative;
+    padding-left: 5rem;
+
+    color: #fff;
+    opacity: 0.5;
+    transition: opacity 100ms ease-in-out;
+}
+
+#nav-shsid-text:hover {
+    opacity: 1;
+}
+
+#nav-shsid-text:visited {
+    color: #fff;
+}
+
+#nav-shsid {
+    position: absolute;
+    right: 10%;
+    top: 55%;
+    transform: translate(50%, -50%);
+    z-index: 2;
+}
+
+nav:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url('img/Untitled_Artwork.png');
+    background-size: 200%;
+    opacity: 0.3;
+}
+
+.section {
+    height: 100vh;
+    width: 100vw;
+    background-color: #131313;
+    position: relative;
+}
+
+.content {
+    height: 90vh;
+    width: 95vw;
+    background-color: #131313;
+    border: dashed white 5px;
+    border-radius: 1rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#main-div-1 .content:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url(img/e87dbe5b4dd77a1c3846cea9dc5c5a.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+}
+
+
+#main-div-a .content:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url(img/iaa.png);
+    background-size: cover;
+    border-radius: 1rem;
+}
+
+.main-text {
+    display: block;
+    background-color: #131313;
+    color: #fff;
+    position: absolute;
+    font-family: 'Newzald Black', Georgia, 'Times New Roman', Times, serif;
+    padding: 3rem;
+    bottom: 10%;
+    left: 5%;
+    z-index: 2
+}
+
+a:visited {
+    color: #fff;
+}
+
+a {
+    color: #fff;
+}
+
+img[src='img/Pasted Graphic.png'] {
+    width: clamp(250px, 20vw, 500px);
+}
+
+#main-div-b .content:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url(img/IMG_1888.jpg);
+    background-size: cover;
+    border-radius: 1rem;
+}
+
+img[src="img/s2f2.png"] {
+    width: clamp(200px, 20vw, 250px);
+}
+
+#main-div-c .content:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url(img/c18.png);
+    background-size: cover;
+    border-radius: 1rem;
+}
+
+#main-div-d p {
+    position: absolute;
+    bottom: 20%;
+    background-color: #131313;
+    z-index: 2;
+
+}
+
+#main-div-d:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    background-image: url(img/Untitled_Artwork.png);
+    background-size: cover;
+    border-radius: 1rem;
+}
+
+#social a {
+    padding: 2rem;
+}
+
+#social {
+    position: absolute;
+    z-index: 3;
+    background-color: #131313;
+    top: 60%;
+    padding: 3rem;
+    left: 5%;
+}
+
+
+#footer-socials {
+    padding: 5rem;
+    background-color: #131313;
+    z-index: 999;
+}
+
+
+@media (max-width: 750px) {
+    #nav-shsid {
+        display: none;
+    }
+    #button {
+        display: block;
+    }
+}
+
+@media (max-width: 1500px) {
+    #nav-shsid-text {
+        display: none;
+    }
+    #button {
+        display: block!important;
+    }
+    nav ul {
+        display: none;
+    }
+    #d {
+        display: none;
+    }
+}
+
+@media (min-width: 750px) {
+    #links {
+        display: none;
+    }
+}
+
+button {
+    all: unset
+}
+#button {
+    display: none;
+    background-color: none;
+    color: #fff;
+    position:absolute;
+    top: 50%;
+    right: 0;
+    padding-right: 2rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#blob {
+    background-color: white;
+    height: 1.5rem;
+    aspect-ratio: 1;
+    position: fixed;
+    z-index: 99999;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+.slc {
+    transition: height 0.1s cubic-bezier(0.25, 0.8, 0.25, 1)
+}
+
+.enlarged {
+    height: 2rem;
+}
+
+#widescreen-links {
+    display: flex;
+    gap: 3rem;
+}
+
+#widescreen-links li {
+    display: inline-block;
+    z-index: 999!important;
+}
+
+#d {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    translate: 0 -25%;
+    z-index: 999;
+}
+
+#credit-text {
+    font-family: "Newzald Black", Georgia, 'Times New Roman', Times, serif;
+    z-index: 99900;
+    color: #fff;
+    margin: 1em;
+}
+
+b {
+    font-family: 'Newzald Black', Georgia, 'Times New Roman', Times, serif;
+}
