@@ -1,44 +1,51 @@
+<!-- 3 -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
     <title>projectryanh.org > /</title>
-    <link rel="icon" type="image/x-icon" href="../img/1f320.ico">
-    <script src="https://kit.fontawesome.com/7308cf0505.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="../img/fullpage.css">
+    <link rel="icon" type="image/x-icon" href="../img/1f320.ico" />
+    <script
+      src="https://kit.fontawesome.com/7308cf0505.js"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="../img/fullpage.css" />
 
-    <meta property="og:url" content="https://projectryanh.org">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="projectryanh.org > /">
-    <meta property="og:title" content="projectryanh.org > Main Page">
-    <meta property="og:description" content="projectryanh is the Project Archive of Ryan H @ SHSID '27.">
-    <meta property="og:image" content="https://projectryanh.org/img/IMG_1888.jpg">
+    <meta property="og:url" content="https://projectryanh.org" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="projectryanh.org > /" />
+    <meta property="og:title" content="projectryanh.org > Main Page" />
+    <meta
+      property="og:description"
+      content="projectryanh is the Project Archive of Ryan H @ SHSID '27." />
+    <meta
+      property="og:image"
+      content="https://projectryanh.org/img/IMG_1888.jpg" />
     <style>
-        @font-face {
-            font-family: n2cb;
-            src: url(../img/test-national-2-compressed-extrabold.woff2);
+      @font-face {
+        font-family: n2cb;
+        src: url(../img/test-national-2-compressed-extrabold.woff2);
+      }
+      @font-face {
+        font-family: pitch;
+        src: url(../img/test-pitch-sans-bold.woff2);
+      }
+      @font-face {
+        font-family: n2cn;
+        src: url(../img/test-national-2-compressed-regular.woff2);
+      }
+      @media (max-width: 750px) {
+        #texttext {
+          padding: 0 2rem !important;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
         }
-        @font-face {
-            font-family: pitch;
-            src: url(../img/test-pitch-sans-bold.woff2);
-        }
-        @font-face {
-            font-family: n2cn;
-            src: url(../img/test-national-2-compressed-regular.woff2);
-        }
-        @media (max-width: 750px) {
-            #texttext {
-                padding: 0 2rem!important;
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%)
-            }
-        }
+      }
     </style>
-        <style>
-            footer {
+    <style>
+      footer {
         background: #131313;
         color: white;
         position: relative;
@@ -47,9 +54,9 @@
         height: 30vh;
         z-index: 2;
         overflow: hidden;
-    }
-    footer:after {
-        content: "";
+      }
+      footer:after {
+        content: '';
         position: absolute;
         top: 0;
         bottom: 0;
@@ -58,260 +65,381 @@
         z-index: 1;
         background-image: url('../img/Untitled_Artwork.png');
         background-size: cover;
-       opacity: 0.3;
-    }
-    
-    footer p {
+        opacity: 0.3;
+      }
+
+      footer p {
         position: absolute;
         bottom: 3rem;
         display: inline;
         margin: 5rem 5rem 5rem 2.5rem;
-        font-family: "Newzald Book", Georgia, 'Times New Roman', Times, serif;
+        font-family: 'Newzald Book', Georgia, 'Times New Roman', Times, serif;
         z-index: 3;
-    }
-    
-    #social {
-    position: absolute;
-        z-index: 1000;
-        width: clamp(300px);
-    }
-    
-    #social a {
-        padding: 2rem;
-    }
-    
-    #social i {
-       font-size: 1.5rem;
-       color: white;
-    }
-    
-    #logo_h {
+      }
+
+      #social {
         position: absolute;
         z-index: 1000;
-        top:0;
-        left:0;
+        width: clamp(300px);
+      }
+
+      #social a {
+        padding: 2rem;
+      }
+
+      #social i {
+        font-size: 1.5rem;
+        color: white;
+      }
+
+      #logo_h {
+        position: absolute;
+        z-index: 1000;
+        top: 0;
+        left: 0;
         padding: 2em;
-        width: clamp(300px, 20vw, 20vw);}
-        </style>
-</head>
-<div id="blob">
+        width: clamp(300px, 20vw, 20vw);
+      }
+    </style>
+  </head>
+<!-- 4 -->
+  <body style="overflow-x: hidden; background-color: #131313">
+	                                                                                                                       
+    <div id="blob"></div>
+    <header style="overflow: hidden">
+      <nav>
+        <a href="../"><img id="nav-logo" src="../img/logo.png" /></a>
+        <button id="button">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div id="d">
+          <ul id="widescreen-links">
+            <li>
+              <a href="../2024/"
+                ><p><b>2024 in Review</b></p></a
+              >
+            </li>
+            <li>
+              <a href="../projects"><p>Projects</p></a>
+            </li>
+            <li>
+              <a href="../p/"><p>Writing</p></a>
+            </li>
+            <li>
+              <a href="../contact/"><p>Contact</p></a>
+            </li>
+          </ul>
+        </div>
 
-</div>
-<body style="overflow-x: hidden; background-color: #131313;">
-    <header style="overflow-x: hidden;">
-        <nav>
-            <a href="../"><img id="nav-logo" src="../img/logo.png"></a>
-            <button id="button">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <div id="d">
-                <ul id="widescreen-links">
-                    <li><a href="../2024/"><p><b>2024 in Review</b></p></a></li>
-                    <li><a href="../projects"><p>Projects</p></a></li>
-                    <li><a href="../p/"><p>Writing</p></a></li>
-                    <li><a href="../contact/"><p>Contact</p></a></li>
-                </ul>
-            </div>
-
-            <div id="nav-shsid">
-                <a href="https://www.shsid.org/" style="text-decoration: none;">
-                    <img target='_blank' src="../img/shsid_logo.png" alt="" id="nav-shsid-logo">
-                    <p id="nav-shsid-text" class="b"> 
-                        Shanghai High School <br>
-                        International Division
-                    </p>
-                </a>
-            </div>
-        </nav>
+        <div id="nav-shsid">
+          <a href="https://www.shsid.org/" style="text-decoration: none">
+            <img
+              target="_blank"
+              src="../img/shsid_logo.png"
+              alt=""
+              id="nav-shsid-logo" />
+            <p id="nav-shsid-text" class="b">
+              Shanghai High School <br />
+              International Division
+            </p>
+          </a>
+        </div>
+      </nav>
     </header>
     <ul id="links">
-        <li><a href="../2024/"><p><b>2024 in Review > </b></p></a></li>
-        <li><a href="../projects"><p>Projects > </p></a></li>
-        <li><a href="../p/"><p>Writing > </p></a></li>
-        <li><a href="../contact/"><p>Contact ></p></a></li>
+      <li>
+        <a href="../2024/"
+          ><p><b>2024 in Review > </b></p></a
+        >
+      </li>
+      <li>
+        <a href="../projects"><p>Projects ></p></a>
+      </li>
+      <li>
+        <a href="../p/"><p>Writing ></p></a>
+      </li>
+      <li>
+        <a href="../contact/"><p>Contact ></p></a>
+      </li>
     </ul>
-    <main style="padding-bottom: 0!important; margin-bottom: 0!important;     white-space: nowrap;
-    position: relative;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;">
-        <div class="section" id="main-div-1" style=" width: 100vw; display: inline-block">
-            <div style="
+    <main
+      style="
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+        white-space: nowrap;
+        position: relative;
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+      ">
+      <div
+        class="section"
+        id="main-div-1"
+        style="width: 100vw; display: inline-block">
+        <style>
+          @media (max-width: 500px) {
+            .bigdick > * {
+              zoom: 0.7;
+            }
+          }
+        </style>
+        <div
+          class="bigdick"
+          style="
             position: absolute;
             height: 80vh;
+            max-width: calc(100vw - 50px - 2rem);
             width: 1000px;
+            margin-left: 25px;
+            margin-right: 25px;
+            left: 0;
             background-color: white;
             border: #131313 dashed 5px;
             border-radius: 2rem;
-            margin: 4rem;
-            margin-bottom: 0;
-            overflow-y: hidden;
-            overflow-x: scroll!important;
-                ">
-                <p style="
-                position: absolute;
-                    left: 2rem;
-                    top: 2rem;
-                    font-family: n2cb;
-                    font-size: 3rem;
-                ">
-                    REISEPASS <img src="../img/1f1e6-1f1f9.svg" style="height: 30px;"></img>
-                    <p style="
-                    position: absolute;
-                    left: 1.98rem;   
-                    top: 5.2rem;                     
-                        font-family: pitch;
-                        font-size: 1rem;
-                    ">
-                        PASSPORT | <a style="z-index: 999; color: #131313;" href="https://www.harvardmun.org/" target="_blank">HMUN 2025</a>
-                    </p>
+            overflow: clip;
+          ">
+          <p
+            style="
+              position: absolute;
+              left: 2rem;
+              top: 2rem;
+              font-family: n2cb;
+              font-size: 3rem;
+            ">
+            REISEPASS
+            <img src="../img/1f1e6-1f1f9.svg" style="height: 30px" />
+          </p>
 
-                    <p style="font-family: pitch;
-                    font-size: 1rem;
-                    position: absolute;
-                    top: 1.9rem;
-                    left: 15rem;">
-                    COMMITTEE
-                </p>
-                <a style="
-                position: absolute;
-                    left: 14.9rem;
-                    top: 3rem;
-                    font-family: n2cn;
-                    font-size: 2.5rem;
-                    line-height: 2rem;
-                    color: #131313;
-                " href="https://www.harvardmun.org/cnd" target="_blank">COMMITTEE ON <br> NARCOTIC DRUGS</a>
+          <p
+            style="
+              position: absolute;
+              left: 1.98rem;
+              top: 5.2rem;
+              font-family: pitch;
+              font-size: 1rem;
+            ">
+            PASSPORT |
+            <a
+              style="z-index: 999; color: #131313"
+              href="https://www.harvardmun.org/"
+              target="_blank"
+              >HMUN 2025</a
+            >
+          </p>
 
-                <div style="
+          <p
+            style="
+              font-family: pitch;
+              font-size: 1rem;
+              position: absolute;
+              top: 1.9rem;
+              left: 15rem;
+            ">
+            COMMITTEE
+          </p>
+          <a
+            style="
+              position: absolute;
+              left: 14.9rem;
+              top: 3rem;
+              font-family: n2cn;
+              font-size: 2.5rem;
+              line-height: 2rem;
+              color: #131313;
+            "
+            href="https://www.harvardmun.org/cnd"
+            target="_blank"
+            >COMMITTEE ON <br />
+            NARCOTIC DRUGS</a
+          >
+
+          <div style="position: absolute; top: 20%">
+            <img
+              src="../img/477B371C-1554-4557-B07A-169049684F25_1_201_a.jpeg"
+              alt=""
+              style="height: 600px; position: absolute; left: 2rem" />
+          </div>
+          <div
+            style="
+              position: absolute;
+              background-color: white;
+              height: 20%;
+              width: 100vw;
+              bottom: 0;
+              z-index: 2;
+            ">
+            <p
+              style="
+                font-family: pitch;
+                font-size: 1rem;
                 position: absolute;
-                top: 20%;
-                ">
-                    <img src="../img/477B371C-1554-4557-B07A-169049684F25_1_201_a.jpeg" alt="" style=" height: 600px; position: absolute; left: 2rem;">
-                </div>
-                <div style="
-                position: absolute; background-color: white; height: 20%; width: 100vw; bottom: 0; z-index: 2;">
-                                    <p style="font-family: pitch;
-                                    font-size: 1rem;
-                                    position: absolute;
-                                    top: 2.55rem;
-                                    left: 2rem;">
-                                    NAME
-                                </p>
-                                <a target="_blank" href="https://instagram.com/ryanrainnhe" style="
-                                position: absolute;
-                                    left: 1.9rem;
-                                    top: 3.2rem;
-                                    font-family: n2cn;
-                                    font-size: 2.5rem;
-                                    color: #131313;
-                                ">RYAN HE <i style="color: #131313; font-size: 1.5rem;" class="fa-brands fa-instagram"></i></a>
-                            </p>
-                                                
-                            <p style="font-family: pitch;
-                            font-size: 1rem;
-                            position: absolute;
-                            top: 2.55rem;
-                            left: 16rem;">
-                            NATIONALITY
-                        </p>
-                        <p style="
-                        position: absolute;
-                            left: 15.9rem;
-                            top: 3.2rem;
-                            font-family: n2cn;
-                            font-size: 2.5rem;
-                        ">AUSTRIA/AUT</p>
-                    </p>
-                </div>
-            </div>
-    </main>
-    <div style="background-color: #131313; position: relative; height: 450px; width: 100vw;">
-        <div id="texttext" style="width: clamp(400px, 50vw, 50vw); padding: 0 5rem; position: absolute; top: -12.5%; overflow-x: hidden;">
-            <p style="color: white;">Hi everyone! My name is Ryan and I am a sophomore currently attending Shanghai High School International Division in Shanghai, CN. <br><br> I have an interest in international relations, business administration, and public relations. At home, I serve as the Chief Public Relations Officer at my school's stuco, and the Co-Leader of the School Media/Public Relations Group.<br><br>At HMUN 2025 this year, I am assigned as the Republic of Austria in the Committee of Narcotic Drugs, on the agenda of the Fentanyl Crisis. <br> <br> My solutions for this committee's topic focus on rehabilitating patients under opioid use disorder, providing public service and community awareness, and prosecuting drug traffickers instead of simple possessors. If you resonate with these ideas, feel free to come talk with me via Instagram: <a style="font-family: pitch;" href="https://instagram.com/ryanrainnhe">@ryanrainnhe</a>. <br><br> <br>Wishing well; looking forwards. <br> 01/25</p>
+                top: 2.55rem;
+                left: 2rem;
+              ">
+              NAME
+            </p>
+            <a
+              target="_blank"
+              href="https://instagram.com/ryanrainnhe"
+              style="
+                position: absolute;
+                left: 1.9rem;
+                top: 3.2rem;
+                font-family: n2cn;
+                font-size: 2.5rem;
+                color: #131313;
+              "
+              >RYAN HE
+              <i
+                style="color: #131313; font-size: 1.5rem"
+                class="fa-brands fa-instagram"></i
+            ></a>
+
+            <p
+              style="
+                font-family: pitch;
+                font-size: 1rem;
+                position: absolute;
+                top: 2.55rem;
+                left: 16rem;
+              ">
+              NATIONALITY
+            </p>
+            <p
+              style="
+                position: absolute;
+                left: 15.9rem;
+                top: 3.2rem;
+                font-family: n2cn;
+                font-size: 2.5rem;
+              ">
+              AUSTRIA/AUT
+            </p>
+          </div>
         </div>
+      </div>
+    </main>
+    <div
+      style="
+        background-color: #131313;
+        position: relative;
+        height: 450px;
+        width: 100vw;
+      ">
+      <div
+        id="texttext"
+        style="
+          width: clamp(400px, 50vw, 50vw);
+          padding: 0 5rem;
+          position: absolute;
+          top: -12.5%;
+          overflow-x: hidden;
+        ">
+        <p style="color: white">
+          Hi everyone! My name is Ryan and I am a sophomore currently attending
+          Shanghai High School International Division in Shanghai, CN.
+          <br /><br />
+          I have an interest in international relations, business
+          administration, and public relations. At home, I serve as the Chief
+          Public Relations Officer at my school's stuco, and the Co-Leader of
+          the School Media/Public Relations Group.<br /><br />At HMUN 2025 this
+          year, I am assigned as the Republic of Austria in the Committee of
+          Narcotic Drugs, on the agenda of the Fentanyl Crisis. <br />
+          <br />
+          My solutions for this committee's topic focus on rehabilitating
+          patients under opioid use disorder, providing public service and
+          community awareness, and prosecuting drug traffickers instead of
+          simple possessors. If you resonate with these ideas, feel free to come
+          talk with me via Instagram:
+          <a style="font-family: pitch" href="https://instagram.com/ryanrainnhe"
+            >@ryanrainnhe</a
+          >. <br /><br />
+          <br />Wishing well; looking forwards. <br />
+          01/25
+        </p>
+      </div>
     </div>
     <footer>
-        <a href="../"><img id="logo_h" src="../img/logo.png"></a>
-        <p>© 2024 Shengyang He, All Rights Reserved.</p>
-        <div id="social">
-            
-            <a target='_blank' href="https://instagram.com/ryanrainnhe"><i class="fa-brands fa-instagram"></i></a>
-            <a target='_blank' href="https://youtube.com/@projectryanh"><i class="fa-brands fa-youtube"></i></a>
-            <a target='_blank' href="https://github.com/wyanhache"><i class="fa-brands fa-github"></i></a><br><br>
-        </div>
-
+      <a href="../"><img id="logo_h" src="../img/logo.png" /></a>
+      <p>© 2024 Shengyang He, All Rights Reserved.</p>
+      <div id="social">
+        <a target="_blank" href="https://instagram.com/ryanrainnhe"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a target="_blank" href="https://youtube.com/@projectryanh"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+        <a target="_blank" href="https://github.com/wyanhache"
+          ><i class="fa-brands fa-github"></i></a
+        ><br /><br />
+      </div>
     </footer>
-</body>
-</body>
-<script src="img/fullpage.js">
-</script>
-<script>
-    new fullpage('#fullpage', {
-	//options here
-	autoScrolling:true,
-	scrollHorizontally: true
-});
-</script>
-<script>
-    const blob = document.getElementById("blob");
-    const target = document.getElementById("button");
-    const targets = document.querySelectorAll('.target')
+    <script src="img/fullpage.js"></script>
+    <script>
+      new fullpage('#fullpage', {
+        //options here
+        autoScrolling: true,
+        scrollHorizontally: true,
+      });
+    </script>
+    <script>
+      const blob = document.getElementById('blob');
+      const target = document.getElementById('button');
+      const targets = document.querySelectorAll('.target');
 
-    document.body.onpointermove = event => {
+      document.body.onpointermove = (event) => {
         const { clientX, clientY } = event;
         const scrollTop = document.documentElement.scrollTop;
         blob.style.left = `${clientX}px`;
-        blob.style.top = `${clientY + scrollTop}px`
-    }
+        blob.style.top = `${clientY + scrollTop}px`;
+      };
 
+      // Function to check if the mouse is inside the target
+      function isCursorInsideElement(mouseX, mouseY) {
+        const targetRect = target.getBoundingClientRect();
+        return (
+          mouseX >= targetRect.left &&
+          mouseX <= targetRect.right &&
+          mouseY >= targetRect.top &&
+          mouseY <= targetRect.bottom
+        );
+      }
+      let hasTriggered = false;
+      // Event listener for mouse movement
+      document.addEventListener('mousemove', (event) => {
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
 
-// Function to check if the mouse is inside the target
-function isCursorInsideElement(mouseX, mouseY) {
-    const targetRect = target.getBoundingClientRect();
-    return (
-        mouseX >= targetRect.left &&
-        mouseX <= targetRect.right &&
-        mouseY >= targetRect.top &&
-        mouseY <= targetRect.bottom
-    );
-}
-let hasTriggered = false;
-// Event listener for mouse movement
-document.addEventListener('mousemove', (event) => {
-    const mouseX = event.clientX;
-    const mouseY = event.clientY;
-
-
-    if (isCursorInsideElement(mouseX, mouseY)) {
-        if (!hasTriggered) {
+        if (isCursorInsideElement(mouseX, mouseY)) {
+          if (!hasTriggered) {
             hasTriggered = false;
-            blob.style.transition = 'height 0.1s cubic-bezier(0.25, 0.8, 0.25, 1)'
-            blob.style.height = '2rem';  // Change color when collision happens
+            blob.style.transition =
+              'height 0.1s cubic-bezier(0.25, 0.8, 0.25, 1)';
+            blob.style.height = '2rem'; // Change color when collision happens
 
             setTimeout(() => {
-                blob.style.transition = 'none';
+              blob.style.transition = 'none';
             }, 100); // 100ms = 0.1s
+          }
+        } else {
+          blob.style.transition = 'unset';
+          blob.style.height = '1.5rem'; // Default color when no collision
         }
-    } else {
-        blob.style.transition = 'unset'
-        blob.style.height = '1.5rem';  // Default color when no collision
-    }
-});
-document.getElementById('button').addEventListener('click', function() {
-    var menuDropdown = document.getElementById('links');
-    if (menuDropdown.classList.contains('show')) {
-        menuDropdown.classList.remove('show');
-    } else {
-        menuDropdown.classList.add('show');
-    }
-});
+      });
+      document.getElementById('button').addEventListener('click', function () {
+        var menuDropdown = document.getElementById('links');
+        if (menuDropdown.classList.contains('show')) {
+          menuDropdown.classList.remove('show');
+        } else {
+          menuDropdown.classList.add('show');
+        }
+      });
 
-document.querySelector('main').addEventListener('click', function() {
-    var menuDropdown = document.getElementById('links');
-    if (menuDropdown.classList.contains('show')) {
-        menuDropdown.classList.remove('show');
-    }
-});
-</script>
+      document.querySelector('main').addEventListener('click', function () {
+        var menuDropdown = document.getElementById('links');
+        if (menuDropdown.classList.contains('show')) {
+          menuDropdown.classList.remove('show');
+        }
+      });
+    </script>
+  </body>
 </html>
