@@ -1,6 +1,6 @@
 import os
 
-folder_path = '/Users/wyanhache/Downloads/2024'
+folder_path = '/Users/wyanhache/Documents/2024 LRC Exports/1'
 
 # Iterate through all files in the folder
 for index, file_name in enumerate(os.listdir(folder_path), start=1):
