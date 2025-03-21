@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <script src="https://kit.fontawesome.com/7308cf0505.js" crossorigin="anonymous"></script>
+    <title>Hyperplexed Tutorial - Hover Effect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: font;
+            src: url(../../img/test-founders-grotesk-condensed-bold.woff2);
+        }
+        
+
+        .roboto-mono {
+        font-family: "Roboto Mono", monospace;
+        font-optical-sizing: auto;
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        @media screen and (min-width: 768px) {
+            #containing-body {
+               position: absolute;
+               bottom: -160%;
+            } body {
+                overflow-y: hidden;
+            }
+        } @media screen and (max-width: 768px) {
+            #row-2:nth-last-child(-n+3) {
+            bottom: 0%;
+        }
+            
+        }
+
+        :root {
+            --bg-color: #131313;
+        } a {
+            text-decoration: none;
+            color: #fff;
+        } a:visited {
+            color: #fff;
+        }
+        body {
+            width: 100vw;
+            background-color: #143D60;
+            overflow-x: hidden;
+            align-items: center;
+            user-select: none;
+            background-size:auto;
+        } .card {
+            width: 350px;
+            height: 280px;
+            aspect-ratio: 5/4;
+            background-color: #EB5B00;
+            border-radius: 16px;
+            position: relative;
+            transition: background-color 0.2s;
+        } .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            position: relative;
+        } #containing-body {
+            width: clamp(50vw, 80vw, 80vw);
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        } .card::before {
+            background: radial-gradient(
+                1000px circle at var(--x) var(--y),
+                rgba(255, 255, 255, 1) 0%,
+                rgba(255, 255, 255, 0) 70%
+            );
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: inherit;
+            z-index: 2;
+            opacity: 0;
+            transition: opacity 0.3s;
+        } .card:hover::before {
+            opacity: 1; 
+        } .card > .card-content {
+            opacity: 0;
+            transition: opacity 0.2s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 348px;
+            aspect-ratio: 5/4;
+            margin: 1px;
+            border-radius: 16px;
+            z-index: 1;
+            background-color: #060606;
+            transition: background-color 0.2s;
+            opacity: 1;
+            transition: opacity 0.2s;
+        z-index: 3;
+    } .card-content::before {
+            background: radial-gradient(
+                1000px circle at var(--x) var(--y),
+                rgba(255, 255, 255, 0.1) 0%,
+                rgba(255, 255, 255, 0) 70%
+            );
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: inherit;
+            z-index: 4;
+            opacity: 0;
+            transition: opacity 0.3s;
+        } .card-content:hover::before {
+            opacity: 1;
+        } .card p {
+            color: #fff;
+            font-family: font;
+            font-size: 2rem;
+        }
+
+        #row-1 > .card:first-child {
+            rotate: 5deg;
+            width: 500px;
+            height: 400px;
+        }
+        #row-1 > .card:first-child > .card-content {
+            width: 498px;
+            height: 398px;
+        } #row-2:nth-last-child(-n+3) {
+            bottom: 7.5%;
+        } #row-2 p {
+            font-size: 5rem;
+            color: #fff;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        } #row-2 > .card:first-child {
+            rotate: -2deg;
+        } #row-2 > .card:nth-child(2) {
+            rotate: 2deg;
+        } #row-2 > .card:nth-child(3) {
+            rotate: -2deg;
+        }
+
+        #row-1 > .card:nth-last-child(-n+2) p {
+            position: absolute;
+            left: 5%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="containing-body">
+        <div class="cards" id="row-1">
+            <div class="card" id="hsw">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <div style="position: absolute; padding: 2rem;">
+                        <img src="../../img/IMG_0278-modified.png" height="100px" alt="">
+                    </div>
+                    <div style="position: absolute; font-size: 3rem; padding: 2rem; line-height: .25rem; top: 30%">
+                        <p>Sangwoong Han</p>
+                        <p style="font-family: 'Courier New', Courier, monospace; font-size: 1rem;">Sophomore at Shanghai High<br><br><br><br>  School International Division</p>
+                        <p style="user-select: all; position: absolute; z-index: 999!important; top: 72.5%;"><a target="_blank" href="https://instagram.com/sangwoong0114"><i style="color: #fff; font-size: 1.75rem; padding-right: .5rem;" class="fa-brands fa-instagram"></i>SANGWOONG0114</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <p>Past Work</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <p>Curriculum Vitae</p>
+                </div>
+            </div>
+        </div>
+        <div id="row-2" class="cards">
+            <div class="card">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <p>한
+                    </p>
+                    <p style="font-size: 1rem;">HAN</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <p>상</p>
+                    <p style="font-size: 1rem;">SANG</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <p>웅</p>
+                    <p style="font-size: 1rem;">WOONG</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    const handleOnMouseMove = e => {
+        const {currentTarget: target} = e;
+        const rect = target.getBoundingClientRect(),
+            x = e.clientX - rect.left,
+            y = e.clientY - rect.top;
+
+        target.style.setProperty('--x', `${x}px`);
+        target.style.setProperty('--y', `${y}px`);
+    }
+
+    const handleOnClick = e => {
+        const target = e.currentTarget
+        target.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+        setTimeout(() => target.style.backgroundColor = '#EB5B00', 5000);
+    }
+
+    for (const card of document.querySelectorAll('.card')) {
+        card.onmousemove = e => handleOnMouseMove(e);
+        card.onclick = e => handleOnClick(e);
+    }
+</script>
+</html>
