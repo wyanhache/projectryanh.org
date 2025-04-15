@@ -1,0 +1,692 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Chinese</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1b2d183c-3f17-80f5-b981-d2eb04eb614d" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/met_william_morris_1875.jpg" style="object-position:center 0%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🪢</span></div><h1 class="page-title">Chinese</h1><p class="page-description"></p></header><div class="page-body"><figure id="1b2d183c-3f17-801d-bbd4-ed4ce6982420"><a href="https://www.gushiwen.cn/shiwenv_567fcf6ffefb.aspx" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">江城子·乙卯正月二十日夜记梦原文、翻译及赏析、拼音版及朗读_苏轼_古诗文网</div><div class="bookmark-description">十年生死两茫茫，不思量，自难忘。千里孤坟，无处话凄凉。纵使相逢应不识，尘满面，鬓如霜。夜来幽梦忽还乡，小轩窗，正梳妆。相顾无言，惟有泪千行。料得年年肠断处，明月夜，短松冈。</div></div><div class="bookmark-href"><img src="https://www.gushiwen.cn/favicon.ico" class="icon bookmark-icon"/>https://www.gushiwen.cn/shiwenv_567fcf6ffefb.aspx</div></div></a></figure><figure id="1b6d183c-3f17-8076-800d-f443b06fe5af" class="link-to-page"><a href="https://www.notion.so/1b6d183c3f178076800df443b06fe5af?pvs=21"><span class="icon">🌊</span>水浒传 · 林教头</a></figure><figure id="1b6d183c-3f17-80f8-984b-fd4c9eb7d0d4" class="link-to-page"><a href="https://www.notion.so/1b6d183c3f1780f8984bfd4c9eb7d0d4?pvs=21"><span class="icon">📕</span>荀子 · 劝学</a></figure><p id="1cfd183c-3f17-80a9-8758-ea745a874070" class="">
+</p><p id="1cfd183c-3f17-80eb-93ff-e4f22acf1f6e" class="">期中复习范围：</p><figure id="1d0d183c-3f17-80f8-8163-c939616f44d7"><a href="https://www.gushiwen.cn/shiwenv_f82821b9d569.aspx" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">声声慢·寻寻觅觅原文、翻译及赏析、拼音版及朗读_李清照_古诗文网</div><div class="bookmark-description">寻寻觅觅，冷冷清清，凄凄惨惨戚戚。乍暖还寒时候，最难将息。三杯两盏淡酒，怎敌他、晚来风急！雁过也，正伤心，却是旧时相识。满地黄花堆积，憔悴损，如今有谁堪摘？守着窗儿，独自怎生得黑？</div></div><div class="bookmark-href"><img src="https://www.gushiwen.cn/favicon.ico" class="icon bookmark-icon"/>https://www.gushiwen.cn/shiwenv_f82821b9d569.aspx</div></div></a></figure><figure id="1d0d183c-3f17-80e5-9bcf-f22bc301cd59"><a href="https://www.gushiwen.cn/shiwenv_977076fa07f4.aspx" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">兵车行原文、翻译及赏析、拼音版及朗读_杜甫古诗_古诗文网</div><div class="bookmark-description">车辚辚，马萧萧，行人弓箭各在腰。耶娘妻子走相送，尘埃不见咸阳桥。(耶娘 一作：爷娘)牵衣顿足拦道哭，哭声直上干云霄。道旁过者问行人，行人但云点行频。或从十五北防河，便至四十西营田。</div></div><div class="bookmark-href"><img src="https://www.gushiwen.cn/favicon.ico" class="icon bookmark-icon"/>https://www.gushiwen.cn/shiwenv_977076fa07f4.aspx</div></div></a></figure><h1 id="1d0d183c-3f17-80a1-af49-d57be03372e0" class="">文学常识</h1><h2 id="1d0d183c-3f17-8078-9d13-d5211a7d95fe" class=""><code><strong>《三国演义》</strong></code></h2><ul id="1d0d183c-3f17-80cd-9682-eae68bbf81f6" class="bulleted-list"><li style="list-style-type:disc"><code>元末明初</code>小说家<code>罗贯中</code>作；名<code>本</code>，字<code>贯中</code>，号<code>湖海散人</code>，相传施耐庵之徒；据说是元末起义领袖张士诚的幕僚；公认开辟了<code>历史演义小说</code>这一题材。<ul id="1d0d183c-3f17-8098-9d7c-e7f14313cde5" class="bulleted-list"><li style="list-style-type:circle">依据<code>陈寿《三国志》</code>和民间流传三国（东汉末年-西晋初年）的故事，加入艺术加工</li></ul><ul id="1d0d183c-3f17-80b4-8632-ea5b43b2b924" class="bulleted-list"><li style="list-style-type:circle"><code>长篇</code> <code>章回体</code> <code>历史演义</code>小说，通传120回</li></ul><ul id="1d0d183c-3f17-80c7-af91-eef8d268d771" class="bulleted-list"><li style="list-style-type:circle">和：吴承恩《西游记》、施耐庵《水浒传》、曹雪芹《红楼梦》并称中国四大名著</li></ul></li></ul><figure id="1d0d183c-3f17-8072-8e36-e1b41c725e29" class="image"><a href="Chinese%201b2d183c3f1780f5b981d2eb04eb614d/Screenshot_2025-04-09_at_19.40.01.png"><img style="width:709.9879760742188px" src="Chinese%201b2d183c3f1780f5b981d2eb04eb614d/Screenshot_2025-04-09_at_19.40.01.png"/></a></figure><table id="1d3d183c-3f17-808e-a156-d4e422f1f0c0" class="simple-table"><tbody><tr id="1d3d183c-3f17-8047-8710-ea7c519ab3e5"><td id="&gt;za}" class="" style="width:384px">主要⼈物⽂常：<br/>曹操，字<br/><code>孟德</code>；<br/>鲁肃，字<br/><code>⼦敬</code>；<br/>周瑜，字<br/><code>公谨</code>；<br/>诸葛亮，字<br/><code>孔明</code>，号<code>卧龙</code>。</td></tr></tbody></table><p id="1d0d183c-3f17-8015-b00b-dd0bb3243e20" class="">大致分为五个部分：</p><table id="1d0d183c-3f17-80f0-bc90-f46b2160df8e" class="simple-table"><tbody><tr id="1d0d183c-3f17-80b9-a59e-c67efc3e9668"><td id="J}HC" class=""><strong>阶段</strong></td><td id="DeSx" class=""><strong>内容要点</strong></td></tr><tr id="1d0d183c-3f17-8021-9e4d-db8de888450d"><td id="J}HC" class=""><strong>黄巾起义</strong></td><td id="DeSx" class="">• 东汉末年朝政腐败，张角发动<code>黄巾起义</code>（184年），动摇东汉统治根基，加速地方割据。<br/>• <br/><strong>英雄登场</strong>：<code>刘备、关羽、张飞桃园结义 [蜀]</code>；<code>曹操以镇压黄巾起家 [魏]</code>；吕布、董卓等军阀借机扩张势力。</td></tr><tr id="1d0d183c-3f17-80f2-abcd-c3d37b424f06"><td id="J}HC" class=""><strong>董卓之乱</strong></td><td id="DeSx" class="">• <code>董卓</code>废少帝立献帝（189年），专权暴虐，引发十八路诸侯讨董（如曹操、袁绍）。<br/>• <br/><strong>关键事件</strong>：<code>吕布弑董卓</code>（192年），但乱局未平，军阀混战升级。</td></tr><tr id="1d0d183c-3f17-8045-89b2-fd56946c2af6"><td id="J}HC" class=""><strong>群雄逐鹿</strong></td><td id="DeSx" class="">• 释义补充：“逐鹿”典出《史记》，喻争夺政权；此阶段曹操（挟天子令诸侯）、袁绍（官渡之战）、孙策（江东基业）等势力崛起。<br/>• <br/><strong>重点</strong>：曹操通过<code>官渡之战</code>（200年）<code>统一北方</code>，刘备辗转投奔多势力，<code>孙权巩固江东</code>。</td></tr><tr id="1d0d183c-3f17-805d-94f2-d282bfa28a7c"><td id="J}HC" class=""><strong>三国鼎立</strong></td><td id="DeSx" class="">• <strong>形成标志</strong>：<code><strong>赤壁之战</strong></code>（208年）后<code>曹操退守北方</code>，<code>刘备</code>取荆州、益州，<code>孙权据江东</code>，220年曹丕篡汉（魏），221年刘备称帝（蜀），229年孙权称帝（吴）。<br/>• <br/><strong>对峙特点</strong>：诸葛亮北伐（六出祁山）、孙权经营江南、司马懿掌魏权。</td></tr><tr id="1d0d183c-3f17-8076-9259-e89bcb49911a"><td id="J}HC" class=""><strong>三国归晋</strong></td><td id="DeSx" class="">• <strong>过程</strong>：263年<code>魏</code>灭<code>蜀</code>，265年司马炎篡<code>魏</code>建<code>晋</code>，280年<code>晋</code>灭<code>吴</code>，<code>统一</code>全国。<br/>• <br/><strong>主题呼应</strong>：强调“<code>分久必合</code>”的历史循环，与《三国演义》开篇“天下大势”呼应。</td></tr></tbody></table><h3 id="1d0d183c-3f17-8094-9945-f47a354a5c5e" class=""><code>诸葛亮</code> 181-243</h3><ul id="1d0d183c-3f17-80f1-8159-ee89e8106ea7" class="bulleted-list"><li style="list-style-type:disc">字孔明，号卧龙，蜀汉丞相（佐皇帝的最大官）。</li></ul><ul id="1d0d183c-3f17-8019-89e4-dfbaf3887f54" class="bulleted-list"><li style="list-style-type:disc">代表作《出师表》《诫子书》</li></ul><h3 id="1d0d183c-3f17-8025-88d4-d26e231ab2f3" class=""><code>草船借箭</code></h3><ul id="1d0d183c-3f17-8058-9d73-f6e4e01e6786" class="bulleted-list"><li style="list-style-type:disc">在三国鼎立时期，赤壁之战（208-209）前夕，曹操刚刚打败刘备，又进攻孙权。刘备和孙权联合抵抗曹操。</li></ul><ul id="1d0d183c-3f17-808f-a99a-c4084dfca58d" class="bulleted-list"><li style="list-style-type:disc">第四十六回；曹操幕僚蒋干中了周瑜的反间计后，同时杀了蔡瑁、张允二人</li></ul><h3 id="1d3d183c-3f17-8029-992c-e058463ef783" class=""><code>草船借箭的艺术成分</code></h3><p id="1d3d183c-3f17-805f-91db-e4b77b146dcd" class="">纯/属/虚/构</p><p id="1d3d183c-3f17-8006-820d-fcee0686eb8f" class="">正史上，草船借箭发生在<code>孙权</code>与<code>曹操</code>的<code>濡须之战</code>，孙权坐船<code>亲自去刺探曹操</code>的军情，被曹操<code>发现</code>命令士兵射箭攻击。孙权的船被射歪差点沉了，他便让船掉个头让箭继续射，<code>这样一来船就平衡了</code>，孙权就把船开走了。</p><ul id="1d3d183c-3f17-80f9-8a3b-ed94386a9b69" class="bulleted-list"><li style="list-style-type:disc">孙权的聪明让曹操十分感叹，留下一句名言“生子当如孙仲谋”。</li></ul><h2 id="1d0d183c-3f17-807f-8315-c4853a2cde9a" class=""><code><strong>杜甫</strong></code></h2><p id="1d0d183c-3f17-8022-8209-d073f29eaecb" class="">唐代诗人；字<code>子美</code>、自号<code>少陵野老</code>，后称“<code>诗圣”</code>，其诗称作<code>“诗史”</code>；和李白统称“<code>大李杜</code>”；小李杜：李商隐，杜牧<div class="indented"><ul id="1d0d183c-3f17-80bc-93f2-c410ce766704" class="bulleted-list"><li style="list-style-type:disc">诗人称号：李白 - <code>诗仙</code>，李贺 - <code>诗鬼</code>，孟郊 - <code>诗囚</code></li></ul></div></p><ul id="1d0d183c-3f17-809c-b3c3-d302935cd860" class="bulleted-list"><li style="list-style-type:disc">少年时游山玩水，应举不第，后官场不得意，看多了唐朝社会上层的富裕奢靡，和底层的社会危机</li></ul><ul id="1d0d183c-3f17-8013-89a0-dffbfda9fae4" class="bulleted-list"><li style="list-style-type:disc">755 - 安史之乱爆发，溢关失守，杜甫先后辗转多地。</li></ul><ul id="1d0d183c-3f17-8010-a555-f917e260a315" class="bulleted-list"><li style="list-style-type:disc">759 - 杜甫弃官避乱，生活稳定时心系苍生，胸怀国事。</li></ul><p id="1d0d183c-3f17-8025-95d7-ce53ee32559d" class=""><code>现实主义</code>诗人；诗歌情感沉郁、深厚、浓郁、幽愤、蕴籍；又顿挫，愤激，利用平仄、叠词写出铿锵的字句</p><p id="1d3d183c-3f17-80a5-bda6-cffc791d82e5" class="">
+</p><h3 id="1d0d183c-3f17-8094-923b-fb5f054627eb" class=""><code><strong>《兵车行》</strong></code></h3><ul id="1d0d183c-3f17-80d8-bf21-e216444bdec2" class="bulleted-list"><li style="list-style-type:disc">751作；<code>行体</code>，<code>乐府诗</code>的一种；没有沿用<code>古题</code>，⽽是缘事⽽发，⾃创<code>新题</code><ul id="1d4d183c-3f17-809c-88b4-f63dcf74b2fc" class="bulleted-list"><li style="list-style-type:circle">旧题如：《行路难》《蜀道难》《塞上曲》《关山月》</li></ul></li></ul><ul id="1d4d183c-3f17-80a9-87ef-f9233db5b980" class="bulleted-list"><li style="list-style-type:disc">以往认为是因唐玄宗用兵吐蕃、民苦行役而作</li></ul><ul id="1d4d183c-3f17-80bf-8f41-e30700caa2d1" class="bulleted-list"><li style="list-style-type:disc">当代多说是因当时唐王朝对西南的<code>少数民族</code>不断用兵，依<code>出兵南征之苦</code>而作。</li></ul><h2 id="1d0d183c-3f17-808a-94c0-d9d2e92f3efe" class=""><code>施耐庵</code> </h2><ul id="1d0d183c-3f17-8065-a5ba-de7b6da78f5e" class="bulleted-list"><li style="list-style-type:disc">原名<code>施耳</code>，字<code>肇(zhào)瑞</code>，号<code>子安</code>，别号耐庵，江苏兴化人</li></ul><ul id="1d0d183c-3f17-809c-9dad-c733edfaf700" class="bulleted-list"><li style="list-style-type:disc"><strong>元末明初</strong>文学家</li></ul><ul id="1d0d183c-3f17-808b-abea-c1b083c5a5d4" class="bulleted-list"><li style="list-style-type:disc">罗贯中为其徒子</li></ul><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1d0d183c-3f17-802d-9a25-e0ec9eea1a4b"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="1d0d183c-3f17-80c3-b804-da5feb69abf7" class="">1353年，与白驹场盐民<a href="https://baike.baidu.com/item/%E5%BC%A0%E5%A3%AB%E8%AF%9A/14240?fromModule=lemma_inlink">张士诚</a>等人一起起义反元，因张士诚居功自傲，于是愤然离开<a href="https://baike.baidu.com/item/%E5%B9%B3%E6%B1%9F/168378?fromModule=lemma_inlink">平江</a>，浪迹江湖，替人医病解难。</p></div></figure><h3 id="1d0d183c-3f17-80f9-bb94-fac4799c3c97" class=""><code><strong>《水浒传》</strong></code></h3><ul id="1d0d183c-3f17-801e-b1dc-fa2f03b7cf1e" class="bulleted-list"><li style="list-style-type:disc">又称《忠义水浒传》、《江湖豪客传》</li></ul><ul id="1d0d183c-3f17-8059-81ee-e783e2d7801a" class="bulleted-list"><li style="list-style-type:disc">施耐庵集撰、罗贯中纂修</li></ul><ul id="1d0d183c-3f17-807d-a9c3-f0cfa1c2f1a4" class="bulleted-list"><li style="list-style-type:disc">中国历史上第一部用<code>白话文</code>写成的<code>章回体长篇</code>小说；古典四大名著之一</li></ul><ul id="1d0d183c-3f17-80e4-8458-e02c1893c719" class="bulleted-list"><li style="list-style-type:disc">水浒指水边；<code><a href="https://baike.baidu.com/item/%E5%8C%97%E5%AE%8B/396063?fromModule=lemma_inlink">北宋</a></code><code>末年</code>，<code>一百零八</code>好汉被逼上梁山，大聚义替天行道，起义走向失败的故事。</li></ul><ul id="1d0d183c-3f17-8045-83fa-e816ba290e3f" class="bulleted-list"><li style="list-style-type:disc">多取灵感于祝塘；主题：忠义，人心恶；<code><strong>官逼民反</strong></code><ul id="1d0d183c-3f17-807c-8ba9-f895d77216f8" class="bulleted-list"><li style="list-style-type:circle">揭露了<code>北宋</code>王朝朝廷的黑暗腐败</li></ul></li></ul><div id="1d3d183c-3f17-8059-84ca-f8fcfe4b5bba" class="column-list"><div id="1d3d183c-3f17-80ef-91d7-fa395de611db" style="width:18.75%" class="column"><table id="1d3d183c-3f17-804f-9df2-cd3f51696844" class="simple-table"><tbody><tr id="1d3d183c-3f17-809b-b895-d16a49aa3bdd"><td id="k|`K" class="">林冲：<code>豹⼦头</code><br/>宋江：及时⾬<br/>杨志：青⾯兽<br/>武松：⾏者<br/>鲁智深：<br/><code>花和尚</code><br/>李逵：<br/><code>⿊旋风</code></td></tr></tbody></table></div><div id="1d3d183c-3f17-8030-b55f-d305d0e2549b" style="width:81.25%" class="column"><p id="1d3d183c-3f17-80d2-821d-e10869f8b40d" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathsize="2.074em"><mtext>逵</mtext></mstyle></mrow><annotation encoding="application/x-tex">\huge逵</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4172em;"></span><span class="mord cjk_fallback sizing reset-size6 size10">逵</span></span></span></span></span><span>﻿</span></span></p></div></div><h2 id="1d0d183c-3f17-80ad-9c76-c314016527f4" class=""><code>荀子</code></h2><p id="1d0d183c-3f17-803d-9e60-e5325a202b38" class="">名<code>况</code>，尊称<code>荀卿</code>。先秦战国末期赵国思想家、政治家</p><ul id="1d0d183c-3f17-806a-b75a-f15beda4ecd3" class="bulleted-list"><li style="list-style-type:disc">先秦儒家最后一个代表人物</li></ul><ul id="1d0d183c-3f17-801c-802b-da2cf3c80275" class="bulleted-list"><li style="list-style-type:disc">和孟子处对立两派<ul id="1d0d183c-3f17-8078-8611-dec0c61291f8" class="bulleted-list"><li style="list-style-type:circle">政治上，主张选贤任能，别于孟子“法前王”，提出“<code>法后王</code>”，应社会状况施政</li></ul><ul id="1d0d183c-3f17-808d-bff9-f6790ec56a8a" class="bulleted-list"><li style="list-style-type:circle">人性上，不同意孟子的“性善论”，主张“性恶论”，强调<code>后天教育的重要性</code></li></ul></li></ul><ul id="1d0d183c-3f17-8094-995a-f0071d7c31eb" class="bulleted-list"><li style="list-style-type:disc">其学生<code>韩非</code>、<code>李斯</code>为法家的代表</li></ul><h3 id="1d0d183c-3f17-80b6-86dd-efb9bfdbccb6" class=""><code><strong>《荀子》</strong></code></h3><p id="1d0d183c-3f17-80c8-a4e9-c458aa8334b9" class="">三十二卷。前二十六卷由荀子所著，后六本为弟子所记。</p><ul id="1d0d183c-3f17-8092-82ca-e04868d53446" class="bulleted-list"><li style="list-style-type:disc">由《论语》的语录体发展有标题的论文，标志说理文的成熟</li></ul><ul id="1d0d183c-3f17-8036-8fc8-f3cb80c057b6" class="bulleted-list"><li style="list-style-type:disc">荀子善用比喻</li></ul><p id="1d0d183c-3f17-80b8-8ae9-fb6c0dac2d5b" class="">百家代表：儒家、道家、法家、墨家、阴阳家、纵横家、小说家。</p><h1 id="1d0d183c-3f17-8099-88c4-de51a40bc750" class="">孔明借箭</h1><h3 id="1d3d183c-3f17-8086-b7d8-e9fda5ee9f95" class=""><code>常用字</code></h3><ol type="1" id="1d3d183c-3f17-805d-be98-f7533bc32ab1" class="numbered-list" start="1"><li>妒忌（dù jì）</li></ol><ol type="1" id="1d3d183c-3f17-8008-9cd9-d4f3078b641f" class="numbered-list" start="2"><li>都督（dū）</li></ol><ol type="1" id="1d3d183c-3f17-804e-a5a3-c055bba9a0fc" class="numbered-list" start="3"><li>翎⽑（líng)</li></ol><ol type="1" id="1d3d183c-3f17-8008-b461-ca896a093427" class="numbered-list" start="4"><li>幔（màn）</li></ol><ol type="1" id="1d3d183c-3f17-80ec-b91e-dc2d476088d1" class="numbered-list" start="5"><li>擂⿎（léi)</li></ol><ol type="1" id="1d3d183c-3f17-80e9-89a0-f592678add0e" class="numbered-list" start="6"><li>⽔寨（zhài)</li></ol><h3 id="1d1d183c-3f17-80f6-82e6-d726d3140198" class=""><code><strong>开篇对话描写</strong></code><strong> </strong></h3><table id="1d3d183c-3f17-80c9-8a14-eb52178f55b4" class="simple-table"><tbody><tr id="1d3d183c-3f17-8030-bc06-def1cb3b511d"><td id="{Ahr" class="">瑜⼤惊⽈：“此⼈决不可留！吾决意斩之！”</td><td id="uBa~" class="">周瑜<code>大惊</code>，决定铲除诸葛亮<br/><br/><em><code>心胸狭窄，嫉贤妒能</code></em></td></tr><tr id="1d3d183c-3f17-80f6-8371-cb0c1b09168b"><td id="{Ahr" class="">瑜⽈：“吾⾃有公道斩之，教他死⽽⽆怨。”</td><td id="uBa~" class="">周瑜想杀人不带玩的，不愿任意妥协，执意要杀。<br/><br/><em><code>⽼谋深算，阴险毒辣</code></em></td></tr></tbody></table><table id="1d1d183c-3f17-80e3-9d1f-fca9ad6f7061" class="simple-table"><tbody><tr id="1d1d183c-3f17-809d-b319-e550b2c8ec38"><td id=":vmg" class="" style="width:405px">周瑜：“即日将与曹军交战，水路交兵，当以何兵器为先？”</td><td id="[cNL" class="" style="width:138px">明知故问</td></tr><tr id="1d1d183c-3f17-8076-acfa-f49c496a4deb"><td id=":vmg" class="" style="width:405px">周瑜：“先生之言，甚合愚意。但今军中正缺箭用，敢烦先生监造十万支箭，以沟应敌之具。此系公事，先生幸勿推却。”</td><td id="[cNL" class="" style="width:138px">心中暗喜</td></tr><tr id="1d1d183c-3f17-8051-b10a-c43f768acb01"><td id=":vmg" class="" style="width:405px">周瑜：“十日之内，可完办否？”</td><td id="[cNL" class="" style="width:138px">迫不及待</td></tr><tr id="1d1d183c-3f17-8004-9e3b-e36a461f16ec"><td id=":vmg" class="" style="width:405px">周瑜：“先生料几日可完办？”</td><td id="[cNL" class="" style="width:138px">试探</td></tr><tr id="1d1d183c-3f17-80aa-9951-d42ca3e9ab86"><td id=":vmg" class="" style="width:405px">周瑜：“军中无戏言。”</td><td id="[cNL" class="" style="width:138px">威胁</td></tr><tr id="1d1d183c-3f17-808c-9e92-c5ba927e8a79"><td id=":vmg" class="" style="width:405px">诸葛亮：“大江之上，以弓箭为先。”</td><td id="[cNL" class="" style="width:138px">脱口而出</td></tr><tr id="1d1d183c-3f17-80b2-bec9-e6495db8df83"><td id=":vmg" class="" style="width:405px">诸葛亮说：“都督委托，当然办…”</td><td id="[cNL" class="" style="width:138px">笑了笑</td></tr><tr id="1d1d183c-3f17-802d-98ce-d27141b22f47"><td id=":vmg" class="" style="width:405px">诸葛亮说：“曹军即日将至，若候十日，必误大事。”</td><td id="[cNL" class="" style="width:138px">将计就计</td></tr><tr id="1d1d183c-3f17-80ea-9909-ca92ca1e053c"><td id=":vmg" class="" style="width:405px">诸葛亮说：“只消三日，便可拜纳十万支箭。”</td><td id="[cNL" class="" style="width:138px"><em><code>胸有成竹，镇定自若</code></em></td></tr><tr id="1d1d183c-3f17-80d4-8c10-fa1c2c6de7e2"><td id=":vmg" class="" style="width:405px">诸葛亮说：“怎敢戏都督！愿纳军令状：三日不办，甘当重罚。”</td><td id="[cNL" class="" style="width:138px">胸有成竹</td></tr></tbody></table><p id="1d1d183c-3f17-809b-9243-c2f110fbfd6f" class="">Q：为什么周瑜提出的要求已经如此迫切，诸葛亮还主动要求只需要三天？</p><p id="1d3d183c-3f17-805d-b708-f4764a211669" class="">A：—</p><ol type="1" id="1d3d183c-3f17-80da-aa67-c5ca8788cccb" class="numbered-list" start="1"><li><code>顾全大局</code>，眼前是魏蜀大战，不得和周瑜计较，且正需要箭来御敌</li></ol><ol type="1" id="1d3d183c-3f17-8076-abdd-cdd1419bc66b" class="numbered-list" start="2"><li>诸葛早对借箭的计划有所准备，看得出来诸葛的<code>胸有成竹</code>、<code>有胆有识</code></li></ol><ol type="1" id="1d3d183c-3f17-80b2-a25b-c9a1fea66329" class="numbered-list" start="3"><li>诸葛算计好了三天之后的水上大雾，为了借箭计划的成功，必定在三天之后出发</li></ol><p id="1d3d183c-3f17-80bd-986d-cea9e257e36b" class="">
+</p><p id="1d3d183c-3f17-801a-9dd6-f5a88ddc2589" class="">Q：为何诸葛亮猜到周瑜的反间计，让周瑜大惊？周瑜“请”诸葛亮商议军事的真正目的是什么？从中可以看出周瑜的什么心理？</p><p id="1d3d183c-3f17-80ec-b608-cfe76408efad" class="">A：周瑜的大惊，是他没有想到诸葛亮能够看穿他的诡计，让周瑜自己的诡秘神测被揭穿。自己的套路失败，周瑜嫉妒、怨恨诸葛亮比他高的才华，于是下计准备陷害他。</p><ul id="1d3d183c-3f17-80e9-a025-d75eb115f2c0" class="bulleted-list"><li style="list-style-type:disc">此计，由于为”公事“而可逼迫诸葛亮接收军令，并且以广众汇集让诸葛没有退路，只好让他接受任务。</li></ul><ul id="1d3d183c-3f17-802d-b51f-e467df9f44d7" class="bulleted-list"><li style="list-style-type:disc">由此可见周瑜的嫉妒、小心眼、<code>没有大观</code>、和险恶用心。</li></ul><p id="1d3d183c-3f17-8076-896c-ff6ab0c4f1f5" class="">
+</p><p id="1d3d183c-3f17-8003-b8fe-cabbc45e1299" class="">Q：为什么鲁肃和诸葛亮的两次对话，一次告诉了周瑜，一次没有？</p><p id="1d3d183c-3f17-8046-89f0-f1aaedb82335" class="">A：第一次告诉了周瑜，是由于鲁肃是由周瑜作为下属来试探诸葛亮，只好如实告诉周瑜实话，依此看出鲁肃<code>忠厚老实</code>。第二次，鲁肃为了诸葛亮由于他的禀告所陷入的不可能境界感到内疚，但<code>顾全大局</code>，希望看到蜀吴联盟能够成功抗曹，虽不知道其借物的意义，仍然私下借给了他所索之物。</p><p id="1d3d183c-3f17-80af-a7ba-d594e515baff" class="">
+</p><p id="1d3d183c-3f17-804e-816a-ef08a2f38891" class="">Q：为什么诸葛亮直到第三天四更才去开船借箭？</p><p id="1d3d183c-3f17-8059-a5d9-e639f67542d1" class="">A：因为第三天有雾，能够罩住曹操水寨附近的水域，使得多疑的曹操派射箭手往水面上乱射，从而得箭于船上的草把。<br/><br/></p><p id="1d3d183c-3f17-8067-a531-fd46d2057976" class="">诸葛亮怎么知道三天之内必有大雾？ </p><p id="1d3d183c-3f17-803d-819d-e5e2dfc0b299" class="">A：算的呗。诸葛亮算到了雾在第三天起、准备好了船和草把、算到了曹操的多疑、预判到了回撤水流的湍急，天时地利人和导致借箭成功。<br/><br/></p><p id="1d3d183c-3f17-80fe-828a-cf0cd13d79ac" class="">Q：角色换位，对比体会：这场大雾，诸葛亮，鲁肃都看到了。他们各自的心理活动分別是怎样的？</p><table id="1d3d183c-3f17-80e2-8623-ff2d0548da99" class="simple-table"><tbody><tr id="1d3d183c-3f17-8075-81d4-f08bbadc5eed"><td id="MJSq" class=""></td><td id="@OSg" class="">诸葛亮</td><td id="c`U|" class="">鲁肃</td></tr><tr id="1d3d183c-3f17-8007-9f89-fe8c79460dd3"><td id="MJSq" class=""></td><td id="@OSg" class="">“导演”</td><td id="c`U|" class="">“观众”</td></tr><tr id="1d3d183c-3f17-80b7-87d6-ce6f10819016"><td id="MJSq" class="">在前往水寨时</td><td id="@OSg" class="">谈笑自如，<code>全知</code>。对计谋绝对的<code>自信</code></td><td id="c`U|" class="">在信息差之中，不知接下来会发生什么，心带<code>恐慌</code>和<code>质疑</code></td></tr><tr id="1d3d183c-3f17-809a-86e2-fc76f44510f0"><td id="MJSq" class="">在曹军敌舟时</td><td id="@OSg" class="">依然从容不定；雾散时，<code>警惕</code>将数舟收回</td><td id="c`U|" class="">认知的颠覆，箭雨下时十分震撼</td></tr><tr id="1d3d183c-3f17-80fe-8651-d4a535a4cd93"><td id="MJSq" class="">获箭后</td><td id="@OSg" class="">返程时戏剧性的表演</td><td id="c`U|" class="">返程时，对诸葛亮的膜拜，佩服，和<code>敬畏</code>（稍稍的<code>畏惧</code>）</td></tr></tbody></table><p id="1d3d183c-3f17-8091-af1c-da760d4543da" class="">Q：为什么诸葛亮让鲁肃一路陪同？</p><p id="1d3d183c-3f17-80f3-b9e8-d67899a79fe5" class="">A：—</p><ol type="1" id="1d3d183c-3f17-8043-b55f-f78ef60400cc" class="numbered-list" start="1"><li>利用鲁肃的“老实人”性格，用自己和鲁肃之间的信息差，再加上取箭时候表现的从容不迫，达到庞大的威慑力，让鲁肃体会到诸葛亮的智慧和算计，感染鲁肃，得到他的跟随。</li></ol><ol type="1" id="1d3d183c-3f17-8068-8137-cb4291081bce" class="numbered-list" start="2"><li>利用鲁肃的眼见为实，来固化孙刘抗曹的联盟，向周瑜发送信号：“不可为敌，只可为援。”</li></ol><ol type="1" id="1d3d183c-3f17-804f-9de6-d56a59bb5681" class="numbered-list" start="3"><li>若诸葛亮单独出行，可以被当作通曹，同样被判罪。有鲁肃在场，表现了东吴愿意的参与，也固化了联盟。</li></ol><p id="1d3d183c-3f17-8027-9624-d3a3d985f287" class="">
+</p><p id="1d3d183c-3f17-8098-aa60-e1ecc5046834" class="">Q：为什么标题选用”借“字？</p><p id="1d3d183c-3f17-8056-848c-efaa2037c67c" class="">A：—</p><ol type="1" id="1d3d183c-3f17-80e5-9a1b-d6bcdd7c00df" class="numbered-list" start="1"><li>用“借”<code>更能突出诸葛亮的足智多谋</code>，如果用“骗”，作者就不是赞美诸葛亮了。</li></ol><ol type="1" id="1d3d183c-3f17-80e1-89e0-d9c4a768513e" class="numbered-list" start="2"><li>诸葛的船上士兵都说“谢丞相箭！“，看得是“借”才需要<code>道谢</code>。</li></ol><ol type="1" id="1d3d183c-3f17-8090-8f86-ccae9d5921c5" class="numbered-list" start="3"><li>联系“火烧赤壁”来看，也应用“借”，因为<code>火烧赤壁时，诸葛亮把箭都还给曹操了</code>。(哈哈哈）</li></ol><h3 id="1d3d183c-3f17-8041-85a5-cf026bfd221d" class=""><code>人物细节</code></h3><table id="1d3d183c-3f17-8065-a898-ea1196f506fa" class="simple-table"><tbody><tr id="1d3d183c-3f17-801d-946e-db255343d5cd"><td id="D?mL" class="">周瑜</td><td id="Oth=" class="">心胸狭窄、凶狠狡诈、妒能忌贤、不顾抗曹大局，一心想陷害诸葛亮</td></tr><tr id="1d3d183c-3f17-8089-9e28-fc609dca348f"><td id="D?mL" class="">曹操</td><td id="Oth=" class="">生性多疑、不睹虚实、不敢轻易出击</td></tr><tr id="1d3d183c-3f17-80d2-b0ee-dee13d35f3ef"><td id="D?mL" class="">诸葛亮</td><td id="Oth=" class="">顾全大局、豁达大度、足智多谋、才华卓越</td></tr><tr id="1d3d183c-3f17-80a8-bbc3-cd4249fc59af"><td id="D?mL" class="">鲁肃</td><td id="Oth=" class="">忠厚老实、顾全大局</td></tr></tbody></table><h1 id="1d0d183c-3f17-809b-bbc0-f5c3ec95afed" class="">兵车行</h1><h3 id="1d3d183c-3f17-801e-8c10-e33eb9c24a37" class=""><code>重点字词</code></h3><ol type="1" id="1d3d183c-3f17-803e-9bcf-def505f038f5" class="numbered-list" start="1"><li>辚辚（ lín lín )</li></ol><ol type="1" id="1d3d183c-3f17-8028-ad6f-dcd628fb814c" class="numbered-list" start="2"><li>⼲（gàn )</li></ol><ol type="1" id="1d3d183c-3f17-8082-bca3-f7bc866ecb60" class="numbered-list" start="3"><li>还（hái）</li></ol><ol type="1" id="1d3d183c-3f17-80ca-b260-e675eaee6ab8" class="numbered-list" start="4"><li>戍边（shù )</li></ol><ol type="1" id="1d3d183c-3f17-8089-9e42-f94aef5d811a" class="numbered-list" start="5"><li>卒（zú )</li></ol><ol type="1" id="1d3d183c-3f17-80d5-947c-fbf6b3c0ffad" class="numbered-list" start="6"><li>荆杞（jīng qǐ )</li></ol><ol type="1" id="1d3d183c-3f17-8023-b5b2-eff1334fbecf" class="numbered-list" start="7"><li>陇亩（lǒng )</li></ol><h3 id="1d3d183c-3f17-8084-82fb-d62ddca4a4a2" class=""><code>主题</code></h3><ul id="1d3d183c-3f17-807c-bdee-dff79177e03a" class="bulleted-list"><li style="list-style-type:disc">抨⾚统治阶级<code>穷兵黩武</code>，指控宗武为了开拓边疆，<code>挥霍人血</code></li></ul><ul id="1d3d183c-3f17-8036-be5d-dcbf25cc7980" class="bulleted-list"><li style="list-style-type:disc"><code>同情百姓</code>所受的<code>兵灾之苦</code>，肯定妇女在后线种地的精神</li></ul><ul id="1d3d183c-3f17-8098-9771-cdbf29e74177" class="bulleted-list"><li style="list-style-type:disc">表达<code>反战思想</code></li></ul><p id="1d6d183c-3f17-8047-89b0-dbdf2e9bafce" class="">
+</p><p id="1d6d183c-3f17-8031-97c2-f7ddf4c565ab" class="">情感<code>悲愤、沉重</code></p><p id="1d3d183c-3f17-805a-b84e-ee736310eb5f" class="">写作特点：</p><ul id="1d4d183c-3f17-80ea-8075-cc6488c2812e" class="bulleted-list"><li style="list-style-type:disc">细节</li></ul><ul id="1d4d183c-3f17-8074-843f-e7919e53f769" class="bulleted-list"><li style="list-style-type:disc">夸张</li></ul><ul id="1d4d183c-3f17-8013-8e8a-cec060b2a06d" class="bulleted-list"><li style="list-style-type:disc">想象</li></ul><ul id="1d4d183c-3f17-8004-950a-ce4a4eb62bd8" class="bulleted-list"><li style="list-style-type:disc">场景描写</li></ul><ul id="1d4d183c-3f17-80d8-9f2e-e3a839c5cf77" class="bulleted-list"><li style="list-style-type:disc"><code>第一、三人称结合</code></li></ul><h3 id="1d3d183c-3f17-806a-8df0-d897d19b12a5" class=""><code>诗体·注释、</code><mark class="highlight-teal"><code>翻译</code></mark></h3><hr id="1d3d183c-3f17-80f8-aa05-d3bc10707dbc"/><h3 id="1d3d183c-3f17-80a3-beac-e8f7aef91e74" class=""><mark class="highlight-default_background">车</mark><mark class="highlight-default_background"><code>辚辚</code></mark><mark class="highlight-default_background">，马</mark><mark class="highlight-default_background"><code>萧萧</code></mark><mark class="highlight-default_background">，</mark><mark class="highlight-default_background"><code>行人</code></mark><mark class="highlight-default_background">弓箭各在腰。</mark><mark class="highlight-gray"><mark class="highlight-default_background"><code>3</code></mark></mark></h3><p id="1d4d183c-3f17-8055-a657-c873310a76ee" class="">    <code>车轮声</code>    <div class="indented"><p id="1d4d183c-3f17-80ec-aa57-c2d37b1fdd11" class="">                     <code>马嘶叫声</code></p><p id="1d4d183c-3f17-80c7-b6d6-fcb3c80964c2" class="">                                    <code>被征出发的士兵</code></p></div></p><p id="1d4d183c-3f17-80b0-a996-c3891a558d9a" class=""><mark class="highlight-teal"><code>兵车轮响辚辚，战马嘶喊萧萧，出征的士兵弓箭各自配在腰上</code></mark></p><p id="1d4d183c-3f17-808c-8ce6-c34888935d67" class=""><mark class="highlight-yellow"><code>车、马 - 听觉描写；行人弓箭 - 视觉描写 / 多感官描写</code></mark></p><hr id="1d3d183c-3f17-8031-aae5-e5a70c0eeb0c"/><h3 id="1d3d183c-3f17-80be-a5e2-ca981b8996be" class=""><mark class="highlight-default_background"><code>耶</code></mark><mark class="highlight-default_background">娘</mark><mark class="highlight-default_background"><code>妻子</code></mark><mark class="highlight-default_background"> </mark><mark class="highlight-default_background"><code>走</code></mark><mark class="highlight-default_background"> </mark><mark class="highlight-default_background"><code>相</code></mark><mark class="highlight-default_background">送，尘埃不见</mark><mark class="highlight-default_background"><code>咸阳桥</code></mark><mark class="highlight-default_background">。</mark><mark class="highlight-gray"><mark class="highlight-default_background"><code>3</code></mark></mark></h3><p id="1d3d183c-3f17-80f3-8213-d9630e78f4ab" class=""><code>通“爷”，父亲</code>。                                    <code>位于咸阳的桥，由长安通往西北的必经之路</code><div class="indented"><p id="1d3d183c-3f17-80df-8b13-c3d90d2f06d7" class="">     <code>古今异义，妻和子</code><div class="indented"><p id="1d3d183c-3f17-80bd-9f80-d82ff4003baf" class="">             <code>奔跑</code><div class="indented"><p id="1d4d183c-3f17-80f1-91cd-cfa7c8014c2e" class="">                 <code>指征夫们</code></p></div></p></div></p></div></p><p id="1d4d183c-3f17-8072-a58d-cd7d5a22e289" class=""><mark class="highlight-teal"><code>爹娘妻子儿女都奔跑着相送，行军扬起尘埃，遮天蔽日，都看不见咸阳桥</code></mark></p><p id="1d4d183c-3f17-80c5-bcf8-c0139d6771f5" class="block-color-default"><mark class="highlight-yellow"><code>“尘埃不见咸阳桥” - 夸张；描绘征兵时庞大的人数、车马扬尘</code></mark></p><hr id="1d4d183c-3f17-8067-aa49-d80ea1abe394"/><h3 id="1d3d183c-3f17-8043-b320-c49636d09b4e" class=""><mark class="highlight-default_background">牵衣顿足拦道哭，哭声直上</mark><mark class="highlight-default_background"><code>干</code></mark><mark class="highlight-default_background">云霄。</mark><mark class="highlight-gray"><mark class="highlight-default_background"><code>3</code></mark></mark></h3><p id="1d3d183c-3f17-802b-a537-c479db200707" class="">                                                      <code>冲</code></p><p id="1d4d183c-3f17-8062-9098-c4260595e99f" class=""><mark class="highlight-teal"><code>众人牵着衣服，克顿着脚步，拦住了行道在哭，哭声的洪亮直接冲入了云霄之间</code></mark></p><p id="1d4d183c-3f17-8046-aa2d-d5b94b731c19" class=""><mark class="highlight-yellow"><code>第二句和第三句，各种具体动作描写，强烈突出了出征将士兵和家庭所</code></mark><mark class="highlight-yellow"><code><strong>隔阂</strong></code></mark><mark class="highlight-yellow"><code>一瞬的悲惨场景，揭露战争对社会每一个家庭带来的</code></mark><mark class="highlight-yellow"><code><strong>悲伤</strong></code></mark><mark class="highlight-yellow"><code>、创痕，以及其内涵的</code></mark><mark class="highlight-yellow"><code><strong>悲愤和怨恨</strong></code></mark><mark class="highlight-yellow"><code>。</code></mark></p><p id="1d4d183c-3f17-8070-9559-dbe200085a92" class=""><mark class="highlight-yellow"><code>隐讳地表达了出征时间的长，以及征途的险。</code></mark><mark class="highlight-yellow"> </mark><mark class="highlight-yellow"><code>顶真</code></mark></p><hr id="1d4d183c-3f17-8059-9f8e-c440d480e484"/><h3 id="1d3d183c-3f17-8033-9cdd-d182eb0a833a" class=""><mark class="highlight-default_background">道旁</mark><mark class="highlight-default_background"><code>过者</code></mark><mark class="highlight-default_background">问行人，行人</mark><mark class="highlight-default_background"><code>但云</code></mark><mark class="highlight-default_background"> </mark><mark class="highlight-default_background"><code>点行</code></mark><mark class="highlight-default_background"> </mark><mark class="highlight-default_background"><code>频</code></mark><mark class="highlight-default_background">。</mark><mark class="highlight-gray"><mark class="highlight-default_background"><code>1</code></mark></mark></h3><p id="1d3d183c-3f17-802d-9c4d-fc325c25f5f4" class=""> <code>过路的人，指杜甫</code>     <div class="indented"><p id="1d3d183c-3f17-809e-bb07-d884598b7181" class="">                                          <code>只说</code><div class="indented"><p id="1d3d183c-3f17-8011-ac99-f8ba757c6b67" class="">                                               <code>按户籍名册强征服役</code></p><p id="1d3d183c-3f17-80c4-a759-f621403170e4" class="">                                                               <code>频繁</code></p></div></p></div></p><p id="1d4d183c-3f17-80f1-b1ea-dd03e43d2e7d" class=""><mark class="highlight-teal"><code>[我]问行军怎么回事，行军却只说点兵实在是太频繁</code></mark></p><p id="1d4d183c-3f17-80f8-a54d-c8b835483ceb" class=""><mark class="highlight-yellow"><code>由此叙事视角转成</code></mark><mark class="highlight-yellow"><code><strong>第一人称</strong></code></mark><mark class="highlight-yellow"><code>，将征兵现场渲染更加临近</code></mark></p><p id="1d4d183c-3f17-800b-b648-d4a28ef9f23f" class=""><mark class="highlight-yellow"><code>行人将如此大量的征兵常态化的答案让场景更加凄凉</code></mark></p><p id="1d4d183c-3f17-8049-b551-db4b4420f768" class=""><mark class="highlight-yellow"><code>点行频 - 诗眼</code></mark><mark class="highlight-yellow"> </mark><mark class="highlight-yellow"><code>顶真</code></mark></p><hr id="1d4d183c-3f17-80c4-a3cb-d482b277d27b"/><h3 id="1d3d183c-3f17-805f-b275-c2aca31a8d2d" class=""><mark class="highlight-default"><code>或</code></mark><mark class="highlight-default">从十五北</mark><mark class="highlight-default"><code>防河</code></mark><mark class="highlight-default">，便至四十</mark><mark class="highlight-default"><code>西营田</code></mark><mark class="highlight-default">。</mark></h3><p id="1d3d183c-3f17-80bd-861b-e7b15052c12f" class=""><code>不定指代词，有的人</code><div class="indented"><p id="1d3d183c-3f17-809a-93cc-e169cc6be6c2" class="">               <code>与吐蕃打仗时，在长安以北的防御地</code></p><p id="1d3d183c-3f17-8064-a370-e212cc0dbcfc" class="">                                          <code>屯田制下，士兵空闲时营田。“西营田“同样防守吐蕃。</code></p></div></p><p id="1d4d183c-3f17-8058-bf74-dc59506ae227" class=""><mark class="highlight-teal"><code>有的人从十五岁就前往北防守黄河，便到四十岁被派去西边一边打仗一边营田</code></mark></p><hr id="1d4d183c-3f17-805f-bb5f-df80659f3344"/><h3 id="1d3d183c-3f17-80e3-8adf-c01d1e4eb5bb" class=""><mark class="highlight-default">去时</mark><mark class="highlight-default"><code>里正</code></mark><mark class="highlight-default"> </mark><mark class="highlight-default"><code>与</code></mark><mark class="highlight-default"> </mark><mark class="highlight-default"><code>裹头</code></mark><mark class="highlight-default">，归来头白</mark><mark class="highlight-default"><code>还</code></mark><mark class="highlight-default"> </mark><mark class="highlight-default"><code>戍</code></mark><mark class="highlight-default">边。</mark></h3><p id="1d3d183c-3f17-807c-8d9c-ea2079c4d8ef" class="">  <code>唐制社区领导，每一百户举一里正，检查户口，催促服役。</code><div class="indented"><p id="1d3d183c-3f17-8067-89fb-de6f5aebb5bb" class="">         <code>刚成年的新兵，由里正与其裹头。</code><div class="indented"><p id="1d3d183c-3f17-8004-a6cb-f68b8d9908c6" class=""> <code>替</code>                            <code>归还</code><div class="indented"><p id="1d3d183c-3f17-8001-abbc-e62227b872ef" class="">                                <code>守卫</code></p></div></p></div></p></div></p><p id="1d3d183c-3f17-8014-bd39-dfc2d31c75fb" class=""><mark class="highlight-teal"><code>离家的时候里正还替着裹头，回来的时候头发已经苍白，还要回去守边疆</code></mark></p><p id="1d4d183c-3f17-808c-8279-d8e81970e7ea" class=""><mark class="highlight-yellow"><code>两句都在描写出征的</code></mark><mark class="highlight-yellow"><code><strong>时长</strong></code></mark><mark class="highlight-yellow"><code>、</code></mark><mark class="highlight-yellow"><code><strong>劳累</strong></code></mark></p><hr id="1d4d183c-3f17-801a-bff7-ed8690ef65ec"/><h3 id="1d4d183c-3f17-809e-b6c2-f5ff3f93cb4a" class=""><mark class="highlight-default">边庭流血成海水，</mark><mark class="highlight-default"><code>武皇</code></mark><mark class="highlight-default"> </mark><mark class="highlight-default"><code>开边</code></mark><mark class="highlight-default">意未</mark><mark class="highlight-default"><code>已</code></mark><mark class="highlight-default">。</mark></h3><p id="1d3d183c-3f17-8012-9cec-ff1b24c3899b" class=""><code>边疆</code><div class="indented"><p id="1d3d183c-3f17-800c-b7e6-df1de401c4cb" class="">                       <code>汉武帝刘彻，避讳借代唐玄宗</code></p><p id="1d3d183c-3f17-808b-92d9-fe84182397cb" class="">                                  <code>用武力打开边疆</code></p><p id="1d3d183c-3f17-8014-bed6-eb3c20662ce0" class="">                                                   <code>停止</code></p></div></p><p id="1d4d183c-3f17-8000-8bf4-c4f4e2db8a70" class=""><mark class="highlight-teal"><code>边疆上的战士血流成河，皇上意要蛮力开拓边疆的意气未尽。</code></mark></p><p id="1d4d183c-3f17-8059-b822-d9ca3fbdc6cb" class=""><mark class="highlight-yellow"><code>“边庭流血成海水” - </code></mark><mark class="highlight-yellow"><code><strong>夸张</strong></code></mark><mark class="highlight-yellow"><code>；夸大留血的程度，强调战争的残忍杀戮</code></mark></p><hr id="1d3d183c-3f17-80e4-9ebd-fb5c6bf96ade"/><h3 id="1d3d183c-3f17-8040-a1a2-e9408cb983c3" class=""><mark class="highlight-default">君不闻</mark><mark class="highlight-default"><code>汉家</code></mark><mark class="highlight-default"> </mark><mark class="highlight-default"><code>山东</code></mark><mark class="highlight-default">二百州，千村万落</mark><mark class="highlight-default"><code>生荆杞</code></mark><mark class="highlight-default">。</mark></h3><p id="1d3d183c-3f17-802f-9dba-ea80c5924797" class="">     <code>见上文借代，此处借指唐朝</code>       <code>野生灌木</code><div class="indented"><p id="1d3d183c-3f17-802b-bdb4-d86c1bdb5401" class="">          <code>秦地以东</code>    </p></div></p><p id="1d3d183c-3f17-80e0-a2cf-f35e767acd77" class=""><mark class="highlight-teal"><code>您却没听说当今秦地以东的无数州，万千村落都化落为灌木丛生的荒芜之地</code></mark><code> </code>                                          </p><hr id="1d4d183c-3f17-8033-93d3-e439b4d31dc9"/><h3 id="1d3d183c-3f17-801c-99cf-df6b3841cb37" class=""><mark class="highlight-default"><code>纵</code></mark><mark class="highlight-default">有</mark><mark class="highlight-default"><code>健妇</code></mark><mark class="highlight-default"> </mark><mark class="highlight-default"><code>把</code></mark><mark class="highlight-default">锄犁，禾生</mark><mark class="highlight-default"><code>陇亩</code></mark><mark class="highlight-default"> </mark><mark class="highlight-default"><code>无东西</code></mark><mark class="highlight-default">。</mark></h3><p id="1d3d183c-3f17-8001-a680-f275116a8c40" class=""><code>即使</code> <code>健壮的妇女</code>           <code>通“垄”，耕地上培成一行的土埂 </code><div class="indented"><p id="1d3d183c-3f17-8087-a4a0-c60b62e1b4b2" class="">                                  <code>田地</code> <code>行列不整齐</code><div class="indented"><p id="1d3d183c-3f17-80a0-adb6-d94c1ee06d89" class="">        <code>把握</code> </p></div></p></div></p><p id="1d4d183c-3f17-80b1-a76b-c61288e3eac9" class=""><mark class="highlight-teal"><code>即使有健壮的妇女把握着锄草和犁地的农活，土地里生出的禾粟排列不整齐，也没有产出</code></mark></p><p id="1d4d183c-3f17-8011-b6ea-dbc97a704aa3" class=""><mark class="highlight-yellow"><code>短短两句，体现出了万千村落没了在前线上的男人们，即使有在家健壮的女人们，土地里也长不出食物，突出战役对社会资源的消减和无益</code></mark>。</p><hr id="1d3d183c-3f17-80a3-80dd-cf6fe3d5a0e6"/><h3 id="1d3d183c-3f17-80e3-87d3-f22397bebcc9" class=""><code>况复</code>秦兵耐苦战，被驱不异犬与鸡。</h3><p id="1d3d183c-3f17-80b6-9849-f97b4a89f519" class=""><code>更何况</code></p><p id="1d4d183c-3f17-80f1-ba58-fa9c5c814e9d" class=""><mark class="highlight-teal"><code>更何况关中一带的士兵能打持久战，像狗和鸡一样被赶上战场卖命</code></mark></p><hr id="1d3d183c-3f17-80eb-a1e9-e7c82d3673a1"/><h3 id="1d3d183c-3f17-8083-9c3b-ddc63bba8a67" class=""><code>长者</code>虽有问，<code>役夫</code> <code>敢</code> <code>申恨</code>？<mark class="highlight-gray"><mark class="highlight-default_background"><code>1</code></mark></mark></h3><p id="1d3d183c-3f17-807c-a86f-c12f01bb9879" class=""><code>有名望的人，指杜甫</code><div class="indented"><p id="1d3d183c-3f17-8067-9215-ce04e38cf7fd" class="">                         <code>怎么敢</code><div class="indented"><p id="1d3d183c-3f17-80cc-8cc8-e6220fcf8eb7" class="">             <code>服役的人</code><div class="indented"><p id="1d3d183c-3f17-8053-a3a0-db2024c06bdd" class="">                        <code>申诉心中的冤枉仇恨</code></p></div></p></div></p></div></p><p id="1d4d183c-3f17-809d-931c-f662b829d6c4" class=""><mark class="highlight-teal"><code>我虽有问，可是服役的士兵怎么敢申诉自己的怨恨？</code></mark></p><p id="1d4d183c-3f17-80a6-802a-e9224638e51e" class=""><mark class="highlight-yellow"><code><strong>反问</strong></code></mark><mark class="highlight-yellow"> </mark></p><p id="1d4d183c-3f17-8066-b6ae-c8cb1a136384" class=""><mark class="highlight-yellow"><code>在文章里，当时作为小官杜甫打扮成一个道旁过着的身份，理解着士兵们的苦恨，对他们置仁爱，理解的心态。</code></mark></p><hr id="1d4d183c-3f17-808a-a527-d5d801b81513"/><h3 id="1d3d183c-3f17-80e8-abed-f4c9ab5e2c07" class=""><code>且如</code>今年冬，未<code>休</code> <code>关西</code> <code>卒</code>。</h3><p id="1d3d183c-3f17-803a-9ffb-cefeb2616d23" class=""><code>就像</code>                  <code>没有停止征</code><div class="indented"><p id="1d3d183c-3f17-806a-80df-d029f1d882ae" class="">                            <code>函谷关</code>             <div class="indented"><p id="1d3d183c-3f17-8005-8cdc-d3443a027380" class="">                                 <code>士兵</code></p></div></p></div></p><p id="1d4d183c-3f17-8057-8795-db274643635d" class=""><mark class="highlight-teal"><code>就像今年的冬天已经来临，函谷关往西的征兵依然没有结束</code></mark></p><hr id="1d4d183c-3f17-80da-b1c8-d267cd468cfe"/><h3 id="1d3d183c-3f17-807a-8a66-d471f72e39cd" class="">县官急<code>索</code>租，租税从何出？</h3><p id="1d3d183c-3f17-80f6-8af7-c7990a5fcef1" class=""><code>官府</code>  <code>索取</code></p><p id="1d4d183c-3f17-8036-8b54-e29fc466d72c" class=""><mark class="highlight-teal"><code>县官赶着要受租税，租税却从哪里来？</code></mark></p><p id="1d4d183c-3f17-80cc-b41d-c0bba2e28471" class=""><mark class="highlight-yellow"><code>反问</code></mark></p><hr id="1d3d183c-3f17-8020-ba02-cfcf5556215f"/><h3 id="1d3d183c-3f17-8060-859e-fcb8f8ff1608" class=""><code>信知</code>生男恶，反是生女好。</h3><p id="1d3d183c-3f17-80e5-8ed3-ee983011fcbc" class=""><code>相信</code></p><p id="1d4d183c-3f17-80b2-acbd-c0e030aa57a4" class=""><mark class="highlight-teal"><code>百性都相信生了男孩不好，反而是生了女孩好</code></mark></p><p id="1d4d183c-3f17-8074-8896-ea8c31123b5e" class=""><mark class="highlight-yellow"><code>古来的“重男轻女“观念居然变了 - 这是社会价值观发生颠覆的反应。</code></mark></p><hr id="1d3d183c-3f17-8042-8c33-e2714fbd5ced"/><h3 id="1d3d183c-3f17-801f-b13c-d4079fbba21d" class="">生女<code>犹得</code>嫁<code>比邻</code>，生男埋没随百草。</h3><p id="1d3d183c-3f17-80ee-99fc-c890a4718ea9" class=""> <code>尚且能，依然能</code><div class="indented"><p id="1d3d183c-3f17-80d0-9649-f947306137c0" class="">         <code>近邻</code></p></div></p><p id="1d4d183c-3f17-8015-8ca8-c0016864ba12" class=""><mark class="highlight-teal">生了女孩子尚且能出嫁给邻里，生了男孩只好埋葬于荒草里</mark></p><hr id="1d3d183c-3f17-8009-9829-ca9ada48952d"/><h3 id="1d3d183c-3f17-8031-91d1-f38325c13284" class="">君不见，<code>青海头</code>，古来白骨无人收。</h3><p id="1d3d183c-3f17-8076-bfd2-dfbadcd62977" class="">         <code>青海边，汉、唐和少数民族战争之地</code></p><p id="1d4d183c-3f17-8061-9f8b-e37e7e9c5e00" class=""><mark class="highlight-teal">您却没看见，在青海的边界，白骨从古就没人来收尸</mark></p><p id="1d4d183c-3f17-805a-b579-e8396442b11c" class=""><mark class="highlight-yellow"><code><strong>想象</strong></code></mark></p><hr id="1d3d183c-3f17-803a-83a7-fff38cbf0be0"/><h3 id="1d3d183c-3f17-803f-8e78-f1992f6aebd9" class="">新鬼<code>烦冤</code>旧鬼哭，天阴<code>雨湿</code>声<code>啾啾</code>！</h3><p id="1d3d183c-3f17-800f-b53b-f8f2133fd9ca" class=""> <code>愁烦冤屈</code>                           <code>象声词，凄厉的哭声</code><div class="indented"><p id="1d3d183c-3f17-80b7-bb95-f0063cbf54bd" class="">                           <code>冷雨阴湿</code></p></div></p><p id="1d4d183c-3f17-80e9-8516-cb273701f692" class=""><mark class="highlight-teal"><code>新死的鬼喊冤，老死的鬼哭泣，天阴雨湿时，鬼哭狼嚎不断</code></mark></p><p id="1d4d183c-3f17-80fd-a075-e57e1c6203b3" class=""><mark class="highlight-yellow"><code><strong>想象</strong></code></mark></p><p id="1d4d183c-3f17-8042-b996-e48d32ef9bab" class=""><mark class="highlight-yellow"><code>杜甫在结尾，描绘了青海战场的场景：漫山遍野铺满了白骨，在阴天雨落之时，处处传来鬼哭狼嚎。</code></mark></p><p id="1d4d183c-3f17-80a1-b1ef-d5690396777e" class="block-color-yellow"><mark class="highlight-yellow"><code>这样描写战场，让读者确切感到战争赫然的可怕，讽刺唐玄宗一心开阔疆土的无良之心，罪恶之举。</code></mark></p><hr id="1d4d183c-3f17-801a-a602-ed994df8946f"/><h1 id="1d3d183c-3f17-800d-abfe-e2dbf1b09796" class="">声声慢·寻寻觅觅</h1><p id="1d3d183c-3f17-801e-aba2-f671962fd20c" class=""><code>宋·李清照</code></p><p id="1d3d183c-3f17-800f-aa1d-d6f06fb3c7d8" class=""><code>寻</code>寻觅觅，<code>冷</code>冷清清，<code>凄</code>凄惨惨戚戚。<code>乍</code>暖还寒时候，<code>最</code>难将息。<code>三</code>杯两盏淡酒，<code>怎</code>敌他、<code>晚</code>来风急！<code>雁</code>过也，<code>正</code>伤⼼，<code>却</code>是旧时相识。</p><p id="1d3d183c-3f17-80b7-aa21-edd813ca24c6" class=""><br/><br/><code>满</code>地黄花堆积，<code>憔</code>悴损，<code>如</code>今有谁堪摘？<code>守</code>着窗⼉，<code>独</code>⾃怎⽣得⿊？<code>梧</code>桐更兼细⾬，<code>到</code>黄昏、<code>点</code>点滴滴。<code>这</code>次第，<code>怎</code>⼀个愁字了得！</p><p id="1cfd183c-3f17-8095-978f-c9986b01844d" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
